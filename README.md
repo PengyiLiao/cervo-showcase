@@ -2,6 +2,8 @@
 
 网址：**https://showcase.cervo-tech.com**
 
+仓库：https://github.com/PengyiLiao/cervo-showcase
+
 这个仓库就是网站本身。在 GitHub 网页上改了文件并点 **Commit changes**，大约 1 到 2 分钟后网站会自动更新，不需要其他操作。
 
 > 这个仓库是**公开的**，谁都能看到里面的内容。不要放客户名称、采集员的个人信息、密码、钥匙之类的东西。
