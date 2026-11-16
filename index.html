@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cervo Egocentric Data Showcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+/* Layout idea: an instrument data sheet. Condensed signage headings, mono readouts,
+   real fisheye footage as the hero, one safety-amber signal color for "hard" work and key numbers. */
+:root {
+  --paper: #eef1f3;
+  --panel: #ffffff;
+  --ink: #141d26;
+  --muted: #56626e;
+  --line: #d3d9df;
+  --signal: #e3a008;
+  --signal-ink: #1b1400;
+  --steel: #2a6496;
+  --display: "Archivo", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e141a; --panel: #151d25; --ink: #e5eaee; --muted: #94a1ad; --line: #27323d;
+    --signal: #f0b429; --signal-ink: #1b1400; --steel: #78b3e0; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e141a; --panel: #151d25; --ink: #e5eaee; --muted: #94a1ad; --line: #27323d;
+  --signal: #f0b429; --signal-ink: #1b1400; --steel: #78b3e0; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+img, video { max-width: 100%; display: block; }
+a { color: var(--steel); }
+:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+
+html[data-lang="zh"] .en { display: none !important; }
+html[data-lang="en"] .zh { display: none !important; }
+
+/* header */
+.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top-in { max-width: 1240px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 24px; }
+.brand { font: 800 22px/1 var(--display); font-stretch: 72%; letter-spacing: .06em; text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+.brand i { width: 14px; height: 14px; background: var(--signal); display: inline-block; }
+.nav { display: flex; gap: 18px; flex: 1; flex-wrap: wrap; }
+.nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+.nav a:hover { color: var(--ink); }
+.lang { display: flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.lang button { font: 500 13px/1 var(--mono); background: transparent; color: var(--muted); border: 0; padding: 8px 12px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+@media (max-width: 760px) { .nav { display: none; } .top-in { justify-content: space-between; } }
+
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+section { padding: 64px 0 24px; }
+.kicker { font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 10px; align-items: center; }
+.kicker::before { content: ""; width: 22px; height: 2px; background: var(--signal); }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 800; font-stretch: 78%; line-height: 1.05; margin: 10px 0 12px; }
+h3 { font-size: 22px; font-weight: 700; font-stretch: 85%; }
+.lede { max-width: 68ch; color: var(--muted); margin: 0 0 28px; }
+
+/* hero */
+.hero { padding: 40px 0 28px; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 36px; align-items: center; }
+.hero h1 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 800; font-stretch: 70%; line-height: .98; letter-spacing: -.005em; }
+.hero h1 .zh { font-stretch: normal; font-size: .82em; line-height: 1.15; display: block; }
+.hero p { color: var(--muted); max-width: 52ch; margin: 18px 0 0; }
+.mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.tile { position: relative; aspect-ratio: 16 / 10; background: #000; overflow: hidden; border-radius: 4px; }
+.tile video, .tile img { width: 100%; height: 100%; object-fit: cover; }
+.tile > span { position: absolute; left: 6px; bottom: 6px; font: 500 10.5px/1.2 var(--mono); color: #fff; background: rgba(0,0,0,.55); padding: 3px 6px; border-radius: 3px; max-width: calc(100% - 12px); }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .tile > span { display: none; } }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); margin-top: 8px; }
+.stat { padding: 16px 16px 14px 0; }
+.stat b { display: block; font: 800 34px/1 var(--display); font-stretch: 72%; font-variant-numeric: tabular-nums; }
+.stat b em { font-style: normal; color: var(--signal); }
+.stat span { font-size: 13px; color: var(--muted); }
+.note { font-size: 12.5px; color: var(--muted); margin: 10px 0 0; }
+
+/* scene index */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+.chip { font-size: 13.5px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 6px 10px; border-radius: 999px; text-decoration: none; display: inline-flex; gap: 8px; align-items: baseline; }
+.chip small { font: 500 11.5px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.chip:hover { border-color: var(--ink); }
+.cov { display: grid; gap: 4px; margin: 18px 0 8px; max-width: 760px; }
+.cov-row { display: grid; grid-template-columns: 210px 1fr 64px; gap: 12px; align-items: center; font-size: 13.5px; }
+.cov-bar { height: 10px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.cov-bar i { display: block; height: 100%; background: var(--signal); }
+.cov-row b { font: 500 12.5px var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) { .cov-row { grid-template-columns: 130px 1fr 52px; font-size: 12.5px; } }
+
+.scene { border-top: 1px solid var(--line); padding: 34px 0 10px; }
+.scene-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; align-items: baseline; margin-bottom: 6px; }
+.scene-head h3 { font-size: 28px; }
+.scene-head h3 small { font: 500 13px var(--mono); color: var(--muted); margin-left: 10px; font-stretch: normal; }
+.scene-meta { font: 500 12.5px/1.5 var(--mono); color: var(--muted); }
+.venues { font-size: 13.5px; color: var(--muted); margin: 0 0 16px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
+.player { position: relative; aspect-ratio: 16 / 10; background: #000; cursor: pointer; }
+.player img, .player video { width: 100%; height: 100%; object-fit: cover; }
+.player .play { position: absolute; inset: 0; margin: auto; width: 56px; height: 56px; border-radius: 50%; border: 0; background: rgba(0,0,0,.6); cursor: pointer; display: grid; place-items: center; }
+.player .play::after { content: ""; border-left: 18px solid #fff; border-top: 11px solid transparent; border-bottom: 11px solid transparent; margin-left: 5px; }
+.player .tag { position: absolute; left: 8px; top: 8px; font: 500 11px var(--mono); color: #fff; background: rgba(0,0,0,.55); padding: 3px 6px; border-radius: 3px; }
+.body { padding: 14px 16px 16px; display: grid; gap: 10px; }
+.row1 { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.lv { font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 3px; }
+.lv.hard { background: var(--signal); color: var(--signal-ink); }
+.lv.medium { border: 1px solid var(--steel); color: var(--steel); }
+.lv.easy { border: 1px solid var(--muted); color: var(--muted); }
+.tid { font: 500 12px var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+.task { font-weight: 600; font-size: 15px; }
+.field { font-size: 14px; }
+.field > b { display: block; font: 500 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.field p { margin: 0; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 10px; }
+.facts span b { color: var(--ink); font-weight: 500; }
+
+/* difficulty rubric */
+.rubric { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.rb { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.rb.hard { border-color: var(--signal); }
+.rb p { margin: 0; font-size: 14px; color: var(--muted); }
+.rb .lv { justify-self: start; }
+
+/* tasks */
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font: 500 11.5px var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+td.num { font: 500 13px var(--mono); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td .bar { height: 8px; background: var(--steel); border-radius: 2px; min-width: 2px; }
+td.id { font: 12px var(--mono); color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+
+/* pipeline */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); overflow: hidden; }
+.step { padding: 14px 14px 16px; border-right: 1px solid var(--line); position: relative; }
+.step:last-child { border-right: 0; }
+.step b { font: 600 12px var(--mono); color: var(--signal); display: block; margin-bottom: 4px; }
+.step h4 { margin: 0 0 4px; font: 700 16px/1.25 var(--display); font-stretch: 88%; }
+.step p { margin: 0; font-size: 13px; color: var(--muted); }
+.timeline { margin: 26px 0 8px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 18px 16px 12px; }
+.timeline svg { width: 100%; height: auto; display: block; }
+.timeline svg text { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+.timeline svg .t-strong { fill: var(--ink); font-weight: 500; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); margin-top: 6px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -1px; margin-right: 6px; }
+.filters { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 12px; margin-top: 22px; }
+.filter { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--steel); border-radius: 4px; padding: 14px 16px; }
+.filter.reject { border-left-color: #b4432f; }
+.filter.cut { border-left-color: var(--signal); }
+.filter h4 { margin: 0 0 4px; font: 700 16px/1.3 var(--display); font-stretch: 88%; }
+.filter p { margin: 0; font-size: 13.5px; color: var(--muted); }
+.filter .act { font: 600 11px var(--mono); letter-spacing: .05em; text-transform: uppercase; float: right; color: var(--muted); }
+.filter.reject .act { color: #b4432f; }
+.filter.cut .act { color: var(--signal); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .filter.reject { border-left-color: #e0745f; } :root:not([data-theme="light"]) .filter.reject .act { color: #e0745f; } }
+:root[data-theme="dark"] .filter.reject { border-left-color: #e0745f; }
+:root[data-theme="dark"] .filter.reject .act { color: #e0745f; }
+
+/* metadata */
+.meta-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 20px; align-items: start; }
+@media (max-width: 900px) { .meta-grid { grid-template-columns: minmax(0, 1fr); } }
+.meta-grid > * { min-width: 0; }
+.groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.group { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.group h4 { margin: 0 0 2px; font: 700 17px var(--display); font-stretch: 88%; display: flex; justify-content: space-between; }
+.group h4 small { font: 500 12px var(--mono); color: var(--muted); }
+.group p { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
+.keys { display: flex; flex-wrap: wrap; gap: 5px; }
+.keys code { font: 11.5px var(--mono); background: var(--paper); border: 1px solid var(--line); padding: 2px 6px; border-radius: 3px; }
+pre.json { margin: 0; background: #10171e; color: #d9e2ea; border-radius: 6px; padding: 16px; font: 12px/1.55 var(--mono); overflow-x: auto; max-height: 640px; }
+pre.json .k { color: #f0b429; }
+pre.json .s { color: #9fd0f5; }
+pre.json .n { color: #c6e48b; }
+.cap { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; }
+
+/* hardware + delivery */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 900px) { .two { grid-template-columns: minmax(0, 1fr); } }
+.two > * { min-width: 0; }
+@media (max-width: 560px) { .spec { grid-template-columns: 100px 1fr; } }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; }
+.spec { display: grid; grid-template-columns: 150px 1fr; gap: 8px 16px; font-size: 14px; margin: 12px 0 0; }
+.spec dt { font: 500 12px/1.6 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.spec dd { margin: 0; }
+.tree { font: 12.5px/1.75 var(--mono); margin: 12px 0 0; white-space: pre; overflow-x: auto; }
+.tree .c { color: var(--muted); }
+ul.plain { margin: 12px 0 0; padding-left: 18px; font-size: 14px; }
+ul.plain li { margin: 4px 0; }
+
+footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 26px 0 40px; font-size: 13px; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#top"><i></i>CERVO</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#scenes"><span class="zh">场景</span><span class="en">Scenes</span></a>
+      <a href="#tasks"><span class="zh">任务</span><span class="en">Tasks</span></a>
+      <a href="#difficulty"><span class="zh">难度</span><span class="en">Difficulty</span></a>
+      <a href="#pipeline"><span class="zh">处理 pipeline</span><span class="en">Pipeline</span></a>
+      <a href="#metadata"><span class="zh">Metadata</span><span class="en">Metadata</span></a>
+      <a href="#hardware"><span class="zh">设备与交付</span><span class="en">Hardware &amp; delivery</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="btn-zh" data-set="zh" aria-pressed="true">中文</button>
+      <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <div>
+      <div class="kicker"><span class="zh">第一视角 · 头戴双目 + 双手腕</span><span class="en">Egocentric · head stereo + two wrists</span></div>
+      <h1><span class="en">Real skilled work, filmed first-person, delivered as clean episodes</span><span class="zh">真实工作现场的第一视角数据，切好、标好、质检好再交付</span></h1>
+      <p><span class="zh">我们在真实营业的维修店、工厂、实训室和后厨里采集头戴双目和左右手腕视频。自己的 pipeline 做质检、按任务切 episode、判断难度、写 metadata，交付的是可以直接训练的数据。</span><span class="en">We record head-mounted stereo and left and right wrist video in working repair shops, factories, training labs and kitchens. Our own pipeline runs QC, cuts one episode per task, rates difficulty and writes the metadata, so what you receive is ready for training.</span></p>
+    </div>
+    <div class="mosaic" id="mosaic"></div>
+  </div>
+  <div class="stats" id="stats"></div>
+  <p class="note" id="stats-note"></p>
+
+  <section id="scenes">
+    <div class="kicker" id="scenes-kicker"></div>
+    <h2><span class="zh">场景</span><span class="en">Scenes</span></h2>
+    <p class="lede"><span class="zh">按一级环境标签（L1）分。条形图是每个场景占 hard 时长的比例，每个场景下面都放了示例视频。每个视频下面是 pipeline 自动写的任务描述、难度和判断理由，和交付给客户的 metadata 一致（客户名称已隐去）。视频是从 episode 里截的 14 秒，整段 episode 的长度写在卡片上。</span><span class="en">Grouped by top-level environment label (L1). The bars show each scene's share of hard hours, and every scene has sample clips below. Under each clip are the task description, difficulty and reasoning our pipeline wrote, as delivered in the client metadata (client name removed). Each clip is a 14-second excerpt; the full episode length is on the card.</span></p>
+    <div class="cov" id="coverage"></div>
+    <div class="chips" id="scene-chips"></div>
+    <div id="scene-list"></div>
+  </section>
+
+  <section id="tasks">
+    <div class="kicker" id="tasks-kicker"></div>
+    <h2><span class="zh">任务</span><span class="en">Tasks</span></h2>
+    <p class="lede"><span class="zh">每个 episode 是一个完整的任务。同一类工作在所有场地、所有采集员那里用同一个 task-id，新出现的任务名会先和已确认的任务清单对照、合并。下面是交付时长最多的任务。</span><span class="en">Each episode is one complete task. The same kind of work keeps one task-id across every site and operator; new task names are checked against the confirmed task list and merged before delivery. These are the tasks with the most delivered hours.</span></p>
+    <div class="tablewrap"><table id="task-table"></table></div>
+  </section>
+
+  <section id="difficulty">
+    <div class="kicker"><span class="zh">easy · medium · hard</span><span class="en">easy · medium · hard</span></div>
+    <h2><span class="zh">难度怎么判</span><span class="en">How difficulty is rated</span></h2>
+    <p class="lede"><span class="zh">每个 episode 按画面里占一半以上时间的主要活动来判，不按采集员的职业判。规则写成固定的评分标准，由视觉模型逐段打分并写出理由。标准可以换成客户自己的定义。</span><span class="en">Each episode is rated by the activity that fills more than half of its time, not by the operator's job title. The rules are a fixed rubric; a vision model scores every episode against it and writes its reason. The rubric can be swapped for the client's own definitions.</span></p>
+    <div class="rubric">
+      <div class="rb hard"><span class="lv hard">hard</span><p><span class="zh">需要训练或经验：精密工具、测量、诊断、多个前后依赖的步骤，做错会损坏、返工或有安全风险。</span><span class="en">Needs training or experience: precision tools, measurement, diagnosis, several dependent steps, where mistakes cause damage, rework or safety risk.</span></p></div>
+      <div class="rb"><span class="lv medium">medium</span><p><span class="zh">多步骤的成人工作，需要协调和安排，但没有精密操作或诊断，比如清理工位、打包、看订单。</span><span class="en">Multi-step adult work that needs coordination but no precision or diagnosis, such as cleaning a station, packing or reading orders.</span></p></div>
+      <div class="rb"><span class="lv easy">easy</span><p><span class="zh">谁都能做的单一重复动作，不用工具、不需要技术，比如浇水、搬东西、擦台面。</span><span class="en">One forgiving, repeated motion anyone could do, with no tools or skill, such as watering, carrying or wiping.</span></p></div>
+    </div>
+    <p class="note" style="margin:14px 0 16px"><span class="zh">下面四段都被判成了 medium 或 easy。其中两段主要在看手机：pipeline 能认出这种片段并把难度标低；如果项目要求，也可以直接剪掉（见下面的 pipeline）。</span><span class="en">All four clips below were rated medium or easy. Two of them are mostly phone use: the pipeline recognises this and rates it down, and can cut it out entirely when a project asks for that (see the pipeline below).</span></p>
+    <div class="cards" id="diff-cards"></div>
+  </section>
+
+  <section id="pipeline">
+    <div class="kicker"><span class="zh">云端自动运行 · 机器越多越快</span><span class="en">Runs in the cloud · scales with machines</span></div>
+    <h2><span class="zh">处理 pipeline</span><span class="en">Processing pipeline</span></h2>
+    <p class="lede"><span class="zh">每段原始录像都走同一套流程。规则写在代码里，不靠人工每次判断；拿不准的片段放进人工复核，不直接交付。</span><span class="en">Every raw recording goes through the same steps. The rules live in code rather than in someone's judgment on the day; anything the pipeline is unsure about goes to human review instead of straight to delivery.</span></p>
+    <div class="steps">
+      <div class="step"><b>01</b><h4><span class="zh">完整性检查</span><span class="en">Integrity check</span></h4><p><span class="zh">下载前先查文件齐不齐、是不是空的</span><span class="en">Files present and non-empty, checked before download</span></p></div>
+      <div class="step"><b>02</b><h4><span class="zh">码流与传感器</span><span class="en">Streams &amp; sensors</span></h4><p><span class="zh">坏帧、IMU 乱码、时间戳</span><span class="en">Corrupt frames, garbled IMU, timestamps</span></p></div>
+      <div class="step"><b>03</b><h4><span class="zh">佩戴检查</span><span class="en">Wearing check</span></h4><p><span class="zh">用 IMU 判断有没有戴在头上</span><span class="en">IMU tells whether the camera is on the head</span></p></div>
+      <div class="step"><b>04</b><h4><span class="zh">画面与手部</span><span class="en">Image &amp; hands</span></h4><p><span class="zh">亮度、清晰度、手在不在工作视野里</span><span class="en">Exposure, sharpness, hands in the working view</span></p></div>
+      <div class="step"><b>05</b><h4><span class="zh">AI 复核与切任务</span><span class="en">AI review &amp; task cuts</span></h4><p><span class="zh">视觉模型看图确认，按任务边界切</span><span class="en">A vision model confirms and finds task boundaries</span></p></div>
+      <div class="step"><b>06</b><h4><span class="zh">无损剪切</span><span class="en">Lossless cutting</span></h4><p><span class="zh">不重新编码，双目、手腕、IMU、音频同步剪</span><span class="en">No re-encoding; stereo, wrists, IMU and audio cut together</span></p></div>
+      <div class="step"><b>07</b><h4><span class="zh">标注与 metadata</span><span class="en">Labels &amp; metadata</span></h4><p><span class="zh">任务描述、难度、技能、场景、设备</span><span class="en">Task, difficulty, skill, scene, device</span></p></div>
+      <div class="step"><b>08</b><h4><span class="zh">独立自检</span><span class="en">Independent self-check</span></h4><p><span class="zh">逐条核对规则，通过才交付</span><span class="en">Every rule re-checked before delivery</span></p></div>
+    </div>
+
+    <div class="timeline">
+      <div class="kicker" style="margin-bottom:10px"><span class="zh">示意图：一段 26 分钟的原始录像怎么变成 episode</span><span class="en">Illustration: how a 26-minute raw recording becomes episodes</span></div>
+      <svg viewBox="0 0 1000 150" role="img" aria-label="Timeline illustration">
+        <text x="0" y="14" class="t-strong"><tspan class="zh">原始录像</tspan><tspan class="en">Raw recording</tspan></text>
+        <rect x="0" y="22" width="1000" height="26" rx="3" fill="var(--steel)" opacity=".85"></rect>
+        <rect x="132" y="22" width="34" height="26" fill="#8a96a3"></rect>
+        <rect x="402" y="22" width="58" height="26" fill="var(--signal)"></rect>
+        <rect x="690" y="22" width="22" height="26" fill="#2b2f33"></rect>
+        <rect x="960" y="22" width="40" height="26" fill="#8a96a3"></rect>
+        <line x1="300" y1="18" x2="300" y2="52" stroke="var(--ink)" stroke-width="2" stroke-dasharray="3 2"></line>
+        <line x1="600" y1="18" x2="600" y2="52" stroke="var(--ink)" stroke-width="2" stroke-dasharray="3 2"></line>
+        <text x="132" y="66"><tspan class="zh">没有手</tspan><tspan class="en">no hands</tspan></text>
+        <text x="402" y="66"><tspan class="zh">玩手机</tspan><tspan class="en">phone use</tspan></text>
+        <text x="690" y="66"><tspan class="zh">太暗</tspan><tspan class="en">too dark</tspan></text>
+        <text x="300" y="66" text-anchor="middle"><tspan class="zh">任务边界</tspan><tspan class="en">task boundary</tspan></text>
+        <text x="0" y="98" class="t-strong"><tspan class="zh">交付的 episode</tspan><tspan class="en">Delivered episodes</tspan></text>
+        <rect x="0" y="106" width="130" height="22" rx="3" fill="var(--signal)" opacity=".9"></rect>
+        <rect x="168" y="106" width="130" height="22" rx="3" fill="var(--signal)" opacity=".9"></rect>
+        <rect x="302" y="106" width="98" height="22" rx="3" fill="var(--signal)" opacity=".9"></rect>
+        <rect x="462" y="106" width="136" height="22" rx="3" fill="var(--signal)" opacity=".9"></rect>
+        <rect x="602" y="106" width="86" height="22" rx="3" fill="var(--signal)" opacity=".9"></rect>
+        <rect x="714" y="106" width="244" height="22" rx="3" fill="var(--signal)" opacity=".9"></rect>
+        <text x="8" y="121" fill="#1b1400" style="fill:#1b1400">EP 1</text>
+        <text x="176" y="121" style="fill:#1b1400">EP 2</text>
+        <text x="310" y="121" style="fill:#1b1400">EP 3</text>
+        <text x="470" y="121" style="fill:#1b1400">EP 4</text>
+        <text x="610" y="121" style="fill:#1b1400">EP 5</text>
+        <text x="722" y="121" style="fill:#1b1400">EP 6</text>
+        <text x="0" y="146">0:00</text><text x="1000" y="146" text-anchor="end">26:00</text>
+      </svg>
+      <div class="legend">
+        <span><i style="background:var(--steel)"></i><span class="zh">在干活</span><span class="en">working</span></span>
+        <span><i style="background:#8a96a3"></i><span class="zh">手离开视野，剪掉</span><span class="en">hands out of view, cut</span></span>
+        <span><i style="background:var(--signal)"></i><span class="zh">不在干活，剪掉</span><span class="en">not working, cut</span></span>
+        <span><i style="background:#2b2f33"></i><span class="zh">画面太暗或模糊，剪掉</span><span class="en">too dark or blurry, cut</span></span>
+        <span><span class="zh">剪开处不拼接；短于 30 秒的剩余片段丢弃</span><span class="en">Cut pieces are never stitched; leftovers under 30 s are dropped</span></span>
+      </div>
+    </div>
+
+    <h3 style="margin-top:30px"><span class="zh">会被剔除的视频</span><span class="en">What gets filtered out</span></h3>
+    <div class="filters">
+      <div class="filter reject"><span class="act"><span class="zh">整段不要</span><span class="en">Reject</span></span><h4><span class="zh">文件不全</span><span class="en">Missing files</span></h4><p><span class="zh">头部视频、IMU、时间戳、标定文件任何一个缺失或为空。手腕文件缺了照常处理，在 metadata 里写明缺什么。</span><span class="en">Any head video, IMU, timestamp or calibration file missing or empty. A missing wrist file is still processed, with a flag in the metadata saying what is missing.</span></p></div>
+      <div class="filter cut"><span class="act"><span class="zh">剪掉</span><span class="en">Cut</span></span><h4><span class="zh">码流损坏、IMU 乱码</span><span class="en">Corrupt stream or IMU</span></h4><p><span class="zh">连续超过 10 秒的坏帧或乱码剪掉。10 秒以内是设备常见现象，保留。</span><span class="en">Corrupt frames or garbled IMU longer than 10 s are cut out. Shorter glitches are a known device behaviour and are kept.</span></p></div>
+      <div class="filter reject"><span class="act"><span class="zh">整段不要</span><span class="en">Reject</span></span><h4><span class="zh">画面太暗或模糊</span><span class="en">Too dark or blurry</span></h4><p><span class="zh">左目或右目超过一半时长太暗、太糊，整段不要。局部连续 10 秒以上，剪掉那一段。</span><span class="en">If either eye is too dark or blurry for more than half the recording, it is rejected. Shorter stretches of 10 s or more are cut.</span></p></div>
+      <div class="filter reject"><span class="act"><span class="zh">整段不要 / 剪掉</span><span class="en">Reject / cut</span></span><h4><span class="zh">没戴在头上</span><span class="en">Camera not worn</span></h4><p><span class="zh">挂在胸前或放在桌上：陀螺仪连续 1 分钟低于 2°/s 判为没戴。全程没戴整段不要，部分时间没戴剪掉那段。</span><span class="en">Hung on the chest or left on a desk: gyro below 2°/s for a full minute means not worn. Not worn at all is rejected; not worn for part of the time is cut.</span></p></div>
+      <div class="filter cut"><span class="act"><span class="zh">剪掉</span><span class="en">Cut</span></span><h4><span class="zh">没有手</span><span class="en">No hands</span></h4><p><span class="zh">手离开工作视野 10 秒以上剪掉。工作视野按客户去畸变后的视野计算，每台设备用自己的标定。</span><span class="en">Hands out of the working view for 10 s or more are cut. The working view follows the client's rectified field of view, computed from each device's own calibration.</span></p></div>
+      <div class="filter cut"><span class="act"><span class="zh">剪掉</span><span class="en">Cut</span></span><h4><span class="zh">玩手机、没在干活</span><span class="en">Phone use, idle time</span></h4><p><span class="zh">手在画面里但没在干活：玩手机、闲聊、发呆、站着不动，持续一段时间就剪掉（默认 20 秒，可按项目调整）。</span><span class="en">Hands in view but not doing the task, such as using a phone, chatting or standing idle, are cut once it lasts long enough (20 s by default, adjustable per project).</span></p></div>
+      <div class="filter reject"><span class="act"><span class="zh">整段不要</span><span class="en">Reject</span></span><h4><span class="zh">工作区太小</span><span class="en">Work area too small</span></h4><p><span class="zh">一半以上时间画面里主要是自己的身体，工作区不到画面 20%。</span><span class="en">For more than half the time the frame mostly shows the wearer's body and the work area covers less than 20% of it.</span></p></div>
+      <div class="filter cut"><span class="act"><span class="zh">丢弃 / 切开</span><span class="en">Drop / split</span></span><h4><span class="zh">太短或太长</span><span class="en">Too short or too long</span></h4><p><span class="zh">短于 30 秒的片段丢弃。一个任务超过 30 分钟，在子任务的边界切成几个 episode。</span><span class="en">Pieces shorter than 30 s are dropped. A task longer than 30 minutes is split at sub-task boundaries.</span></p></div>
+      <div class="filter"><span class="act"><span class="zh">标注</span><span class="en">Label</span></span><h4><span class="zh">难度不够</span><span class="en">Not hard enough</span></h4><p><span class="zh">只做简单重复动作、不用工具或不需要技术的片段标成 easy 或 medium，按客户要求决定交不交。</span><span class="en">Episodes that are one repeated motion with no tools or skill are labelled easy or medium, and delivered or held back as the client prefers.</span></p></div>
+    </div>
+    <p class="note"><span class="zh">阈值都可以按客户的规范调整。另外：时钟没设好的设备，时间按同一天其他录像推算并在 metadata 里写明；室内外、上午下午跨段的录像只在 metadata 里分段，不切开。</span><span class="en">Every threshold can be set to the client's spec. Recordings from a device whose clock was not set get estimated times, flagged in the metadata. Recordings that cross indoor/outdoor or morning/afternoon are segmented in the metadata, not cut.</span></p>
+  </section>
+
+  <section id="metadata">
+    <div class="kicker" id="meta-kicker"></div>
+    <h2><span class="zh">Metadata 覆盖什么</span><span class="en">What the metadata covers</span></h2>
+    <p class="lede"><span class="zh">每个 episode 一份 metadata.json，字段名和取值都按客户的标签清单。场所、采集员、设备信息来自我们的登记表，任务和难度由 pipeline 看画面写出，交付前逐条检查有没有空值。</span><span class="en">Every episode ships with one metadata.json, with field names and values taken from the client's approved label lists. Site, operator and device fields come from our registration records; task and difficulty are written by the pipeline from the footage, and every record is checked for blanks before delivery.</span></p>
+    <div class="meta-grid">
+      <div class="groups" id="meta-groups"></div>
+      <div>
+        <pre class="json" id="meta-json"></pre>
+        <p class="cap" id="meta-cap"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="hardware">
+    <div class="kicker"><span class="zh">采集设备 · 交付内容</span><span class="en">Capture rig · delivery package</span></div>
+    <h2><span class="zh">设备与交付</span><span class="en">Hardware and delivery</span></h2>
+    <div class="two">
+      <div class="box">
+        <h3><span class="zh">采集设备</span><span class="en">Capture rig</span></h3>
+        <dl class="spec" id="spec"></dl>
+      </div>
+      <div class="box">
+        <h3><span class="zh">每个 episode 交付什么</span><span class="en">What each episode contains</span></h3>
+        <div class="tree" id="tree"></div>
+        <ul class="plain">
+          <li><span class="zh">原始鱼眼画面，不去畸变、不重新编码；标定参数随片段一起给。</span><span class="en">Original fisheye footage, not undistorted or re-encoded; calibration ships with every clip.</span></li>
+          <li><span class="zh">直接上传到客户的 S3 / R2 桶；每批附 Yield Report，逐段写明通过或拒绝和原因。</span><span class="en">Uploaded straight to the client's S3 or R2 bucket; every batch comes with a yield report listing each recording as accepted or rejected, with the reason.</span></li>
+          <li><span class="zh">也可以按客户格式交付，比如 MCAP。</span><span class="en">Other formats such as MCAP on request.</span></li>
+          <li><span class="zh">每位采集员都签了采集同意书；metadata 里只用化名 ID。</span><span class="en">Every operator has signed a recording consent form; the metadata uses pseudonymous IDs only.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Cervo Technologies, Inc. · <a href="https://cervo-tech.com">cervo-tech.com</a></span>
+    <span id="foot-note"></span>
+  </div>
+</footer>
+
+<script>
+
+const fmt = (n, d = 0) => Number(n).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const bi = (zh, en, tag = "span") => `<${tag} class="zh">${zh}</${tag}><${tag} class="en">${en}</${tag}>`;
+const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+
+// language
+function setLang(l) {
+  document.documentElement.dataset.lang = l;
+  document.documentElement.lang = l === "zh" ? "zh-CN" : "en";
+  document.querySelectorAll(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.set === l)));
+  try { localStorage.setItem("cervo-lang", l); } catch (e) {}
+}
+document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.set)));
+let startLang = (navigator.language || "en").toLowerCase().startsWith("zh") ? "zh" : "en";
+try { startLang = localStorage.getItem("cervo-lang") || startLang; } catch (e) {}
+setLang(startLang);
+
+function render(DATA) {
+const S = DATA.stats;
+// hero mosaic
+document.getElementById("mosaic").innerHTML = DATA.mosaic.map((m) =>
+  `<div class="tile"><video src="${m.video}" ${m.poster ? `poster="${m.poster}" ` : ""}muted loop playsinline autoplay preload="metadata"></video><span>${bi(esc(m.zh), esc(m.en))}</span></div>`).join("");
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll("#mosaic video").forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
+}
+
+// stats
+const tiles = [
+  [fmt(S.hours), "小时通过 QC 的 episode", "hours of QC-passed episodes"],
+  [fmt(S.episodes), "个 episode", "episodes"],
+  [`<em>${S.hard_pct}%</em>`, "时长是 hard", "of hours rated hard"],
+  [S.l1, "个一级场景（L1）", "L1 scene categories"],
+  [S.sites, "个采集场地", "recording sites"],
+  [S.operators, "位真实从业者", "working professionals"],
+  [S.cities, "个城市", "cities"],
+  [fmt(S.peak_day), "小时单日最高处理量", "hours in the busiest day"],
+];
+document.getElementById("stats").innerHTML = tiles.map(([v, zh, en]) => `<div class="stat"><b>${v}</b>${bi(zh, en)}</div>`).join("");
+document.getElementById("stats-note").innerHTML = bi(
+  `数字来自我们给一个海外 AI 数据客户做的第一视角项目：${S.first_day} 到 ${S.last_day}，共 ${S.days} 个处理日。`,
+  `Figures from one egocentric project for an overseas AI-data client: ${S.days} processing days, ${S.first_day_en} to ${S.last_day_en}.`);
+
+// scenes
+document.getElementById("scenes-kicker").innerHTML = bi(
+  `${S.l1} 个 L1 场景 · ${DATA.scenes.reduce((a, s) => a + s.eps.length, 0)} 段示例视频`, `${S.l1} L1 scenes · ${DATA.scenes.reduce((a, s) => a + s.eps.length, 0)} sample clips`);
+const maxShare = Math.max(...DATA.coverage.map((c) => c.share));
+document.getElementById("coverage").innerHTML = DATA.coverage.map((c) => `
+  <div class="cov-row">
+    <span>${bi(esc(c.zh), esc(c.l1))}</span>
+    <div class="cov-bar"><i style="width:${(c.share / maxShare * 100).toFixed(1)}%"></i></div>
+    <b>${c.share.toFixed(1)}%</b>
+  </div>`).join("");
+document.getElementById("scene-chips").innerHTML = DATA.scenes.map((s) =>
+  `<a class="chip" href="#${s.slug}">${bi(esc(s.zh), esc(s.l1))}<small>${fmt(s.hours)} h</small></a>`).join("");
+
+function card(e) {
+  return `<article class="card">
+    <div class="player" data-src="${e.video}">
+      ${e.poster ? `<img src="${e.poster}" alt="" loading="lazy">` : `<video class="pv" src="${e.video}#t=1" preload="metadata" muted playsinline></video>`}
+      <span class="tag">${bi(esc(e.l2_zh || e.l2), esc(e.l2))} · ${mmss(e.dur)}</span>
+      <button class="play" type="button" aria-label="Play clip"></button>
+    </div>
+    <div class="body">
+      <div class="row1"><span class="lv ${e.lv}">${e.lv}</span><span class="tid">${esc(e.task_id)}</span></div>
+      <div class="task">${bi(esc(e.task_zh), esc(e.task_en))}</div>
+      <div class="field">${bi("任务描述 task_description", "Task description", "b")}${bi(`<p>${esc(e.desc_zh)}</p>`, `<p>${esc(e.desc_en)}</p>`, "div")}</div>
+      <div class="field">${bi("难度判断理由", "Why this difficulty", "b")}${bi(`<p>${esc(e.reason_zh)}</p>`, `<p>${esc(e.reason_en)}</p>`, "div")}</div>
+      <div class="facts">
+        <span>${bi("技能", "Skill")} <b>${bi(esc(e.skill_zh), esc(e.skill))}</b></span>
+        <span>${bi("工种", "Job")} <b>${bi(esc(e.job_zh), esc(e.job))}</b></span>
+        <span>${bi("episode 时长", "Episode length")} <b>${mmss(e.dur)}</b></span>
+      </div>
+    </div>
+  </article>`;
+}
+document.getElementById("scene-list").innerHTML = DATA.scenes.map((s) => `
+  <div class="scene" id="${s.slug}">
+    <div class="scene-head">
+      <h3>${bi(esc(s.zh), esc(s.l1))}<small>${esc(s.l1)}</small></h3>
+      <div class="scene-meta">${bi(`${fmt(s.hours)} 小时 · ${fmt(s.ep_count)} 个 episode · ${s.task_count} 种任务`, `${fmt(s.hours)} h · ${fmt(s.ep_count)} episodes · ${s.task_count} task types`)}</div>
+    </div>
+    <p class="venues">${bi("场所（L2）：" + s.venues.map((v) => esc(v.zh || v.en)).join("、"), "Venues (L2): " + s.venues.map((v) => esc(v.en)).join(", "))}</p>
+    <div class="cards">${s.eps.map(card).join("")}</div>
+  </div>`).join("");
+
+document.getElementById("diff-cards").innerHTML = DATA.diff.map(card).join("");
+
+document.addEventListener("click", (ev) => {
+  const p = ev.target.closest(".player");
+  if (!p || p.querySelector("video:not(.pv)")) return;
+  const v = document.createElement("video");
+  v.src = p.dataset.src; v.controls = true; v.autoplay = true; v.muted = true; v.playsInline = true; v.loop = true;
+  p.querySelector("img, video.pv").replaceWith(v);
+  p.querySelector(".play").remove();
+  v.play().catch(() => {});
+});
+
+// tasks
+const T = DATA.tasks;
+document.getElementById("tasks-kicker").innerHTML = bi(`${S.task_ids} 个 task-id · 显示前 ${T.length} 个`, `${S.task_ids} task-ids · top ${T.length} shown`);
+const tmax = Math.max(...T.map((t) => t.hours));
+document.getElementById("task-table").innerHTML = `
+  <thead><tr><th>${bi("任务", "Task")}</th><th>task-id</th><th>${bi("场景 L1", "Scene L1")}</th><th>${bi("hard 占比", "Hard share")}</th><th>${bi("episode", "Episodes")}</th><th>${bi("小时", "Hours")}</th><th style="width:22%"></th></tr></thead>
+  <tbody>${T.map((t) => `<tr>
+    <td>${bi(esc(t.zh), esc(t.en))}</td><td class="id">${esc(t.id)}</td><td>${bi(esc(t.l1_zh), esc(t.l1))}</td>
+    <td class="num">${t.hard_pct}%</td><td class="num">${fmt(t.eps)}</td><td class="num">${fmt(t.hours, 1)}</td>
+    <td><div class="bar" style="width:${(t.hours / tmax * 100).toFixed(1)}%"></div></td></tr>`).join("")}</tbody>`;
+
+// metadata
+const G = DATA.meta_groups;
+document.getElementById("meta-kicker").innerHTML = bi(`${G.reduce((a, g) => a + g.keys.length, 0)} 个字段 · 6 组`, `${G.reduce((a, g) => a + g.keys.length, 0)} fields · 6 groups`);
+document.getElementById("meta-groups").innerHTML = G.map((g) => `<div class="group">
+  <h4>${bi(esc(g.zh), esc(g.en))}<small>${g.keys.length}</small></h4>
+  ${bi(`<p>${esc(g.dzh)}</p>`, `<p>${esc(g.den)}</p>`, "div")}
+  <div class="keys">${g.keys.map((k) => `<code>${esc(k)}</code>`).join("")}</div></div>`).join("");
+function hl(obj) {
+  const j = JSON.stringify(obj, null, 2);
+  return esc(j).replace(/(&quot;[^&]*?&quot;)(\s*:)/g, '<span class="k">$1</span>$2')
+    .replace(/:\s(&quot;.*?&quot;)/g, ': <span class="s">$1</span>')
+    .replace(/:\s(-?\d+(\.\d+)?)/g, ': <span class="n">$1</span>');
+}
+document.getElementById("meta-json").innerHTML = hl(DATA.meta_example);
+document.getElementById("meta-cap").innerHTML = bi(DATA.meta_cap_zh, DATA.meta_cap_en);
+
+// hardware
+document.getElementById("spec").innerHTML = DATA.spec.map((r) => `<dt>${bi(esc(r.kzh), esc(r.ken))}</dt><dd>${bi(esc(r.vzh), esc(r.ven))}</dd>`).join("");
+document.getElementById("tree").innerHTML = DATA.tree;
+document.getElementById("foot-note").innerHTML = bi(`数据截至 ${S.last_day}`, `Figures as of ${S.last_day_en}`);
+}
+
+fetch("data.json", { cache: "no-cache" })
+  .then((r) => r.json())
+  .then(render)
+  .catch((err) => {
+    const box = document.createElement("div");
+    box.setAttribute("role", "alert");
+    box.style.cssText = "position:fixed;left:16px;right:16px;bottom:16px;z-index:99;background:#b4432f;color:#fff;padding:14px 16px;border-radius:6px;font:14px/1.5 var(--body)";
+    box.textContent = "data.json 读不出来，多半是改的时候少了逗号或引号。请把 data.json 交给 AI 检查格式，或者在 GitHub 的 History 里退回上一版。（" + err.message + "）";
+    document.body.appendChild(box);
+  });
+</script>
+</body>
+</html>
