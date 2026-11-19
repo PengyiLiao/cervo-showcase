@@ -67,7 +67,7 @@
 
 ### 改首屏的数字
 
-`data.json` 最上面的 `stats` 一段：`sites` 是 ZZ、EN、SE2 三个项目合计的采集地点数（同一家店只算一次），`sites_en` 是案例库这个项目的地点数，`operators` 从业者人数，`l1` 一级场景数，`hard_pct` hard 占比。改完首屏会跟着变。每个场景和任务的 `sites` 是它去过的地点数（按 metadata 里的场所 ID 统计）。
+`data.json` 最上面的 `stats` 一段：`sites` 是 ZZ、EN、SE2 三个项目合计的采集地点数（同一家店只算一次），`sites_en` 是案例库这个项目的地点数，`operators` 从业者人数，`l1` 一级场景数，`hard_pct` hard 占比。改完首屏会跟着变。每个场景的 `sites` 是三个项目合计的地点数：EN 按 metadata 里的场所 ID，ZZ 和 SE2 按各自场景表/结算表里的店名归到一级场景，和 EN 重复的店不重复算。每个任务的 `sites` 只算 EN。
 
 `raw_download` 是「下载完整原始数据」按钮指向的地址（Cloudflare 上的样本下载站，要访问码）。删掉这一行，按钮就不显示。库存小时数不放在网站上：这个仓库是公开的，写进 data.json 任何人都能看到。
 

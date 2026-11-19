@@ -123,7 +123,86 @@
           "l1": "Repair Services"
         }
       ],
-      "sites": 20
+      "sites": 23
+    },
+    {
+      "l1": "Food and Beverage",
+      "zh": "餐饮",
+      "slug": "food-and-beverage",
+      "task_count": 27,
+      "venues": [
+        {
+          "en": "Cake Shop",
+          "zh": "蛋糕店"
+        },
+        {
+          "en": "Coffee Shop",
+          "zh": "咖啡店"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/b63e185d.mp4",
+          "poster": "p/b63e185d.jpg",
+          "dur": 330,
+          "lv": "hard",
+          "task_id": "cake_assembly_and_frosting",
+          "task_zh": "蛋糕夹层抹面",
+          "task_en": "Cake assembly and frosting",
+          "desc_zh": "工人在手机上核对订单，用圆形切模切出圆形海绵蛋糕片，然后在海绵蛋糕层之间铺上芒果和奶油，并用抹刀给蛋糕抹面。",
+          "desc_en": "Worker checks a phone order, cuts sponge rounds with a ring cutter, then layers mango and cream between sponge layers and frosts the cake with a spatula.",
+          "reason_zh": "本段大部分时间是切圆形海绵蛋糕片、用刀切芒果，以及在转台上用抹刀铺奶油分层并抹平。这些精细的工具操作符合客户认可为高难度的蛋糕组装和食材准备。",
+          "reason_en": "Most of the episode is cutting sponge rounds, slicing mango with a knife, and layering and smoothing cream with a palette knife on a turntable. This precise tool work matches the cake assembly and ingredient prep that the client accepts as hard.",
+          "skill": "Food Preparation & Cooking",
+          "skill_zh": "食品制作与烹饪",
+          "job": "Cake decorator",
+          "job_zh": "蛋糕裱花师",
+          "l2": "Cake Shop",
+          "l2_zh": "蛋糕店",
+          "l1": "Food and Beverage"
+        },
+        {
+          "video": "v/0b0d5125.mp4",
+          "poster": "p/0b0d5125.jpg",
+          "dur": 334,
+          "lv": "hard",
+          "task_id": "cake_decorating",
+          "task_zh": "蛋糕裱花装饰",
+          "task_en": "Cake decorating",
+          "desc_zh": "蛋糕裱花师用抹刀和裱花袋，在两个已抹好奶油的蛋糕上刮掉并重新挤出奶油旋花装饰，然后把边缘抹平。",
+          "desc_en": "Cake decorator scrapes off and re-pipes swirl cream decorations on two cream-covered cakes using a palette knife and piping bag, then smooths edges.",
+          "reason_zh": "本片段大部分时间是用裱花袋和抹刀精细制作旋花装饰，包括修正和重做装饰，这与蛋糕裱花类工作的困难评级相符。",
+          "reason_en": "Most of the episode is precise piping and palette-knife work on swirl decorations. This includes correcting and redoing the decoration, which matches the hard rating for cake decorating with piping.",
+          "skill": "Food Preparation & Cooking",
+          "skill_zh": "食品制作与烹饪",
+          "job": "Cake decorator",
+          "job_zh": "蛋糕裱花师",
+          "l2": "Cake Shop",
+          "l2_zh": "蛋糕店",
+          "l1": "Food and Beverage"
+        },
+        {
+          "video": "v/2c47611c.mp4",
+          "poster": "p/2c47611c.jpg",
+          "dur": 343,
+          "lv": "hard",
+          "task_id": "bakery_ingredient_prep",
+          "task_zh": "烘焙备料",
+          "task_en": "Bakery ingredient prep",
+          "desc_zh": "烘焙师从搅拌机的搅拌缸里舀出黄油酥粒馅料，装进塑料裱花袋，然后用刮板把馅料往下推压，并封好袋子备用。",
+          "desc_en": "Baker scoops butter-crumb filling from the mixer bowl into a plastic piping bag, then uses scrapers to push the filling down and seal the bag for later use.",
+          "reason_zh": "本段大部分时间是食材准备：用刮板和刮刀往裱花袋里装料并压实。在食材准备中使用工具评为困难，在困难和中等之间拿不准时选择较高等级。",
+          "reason_en": "Most of the episode is ingredient prep: filling and compacting a piping bag with a scraper and spatula. Tool use in ingredient prep is rated hard, and when unsure between hard and medium the higher level is chosen.",
+          "skill": "Food Preparation & Cooking",
+          "skill_zh": "食品制作与烹饪",
+          "job": "Baker",
+          "job_zh": "烘焙师",
+          "l2": "Cake Shop",
+          "l2_zh": "蛋糕店",
+          "l1": "Food and Beverage"
+        }
+      ],
+      "sites": 17
     },
     {
       "l1": "Clothing and Fashion",
@@ -198,82 +277,153 @@
           "l1": "Clothing and Fashion"
         }
       ],
-      "sites": 4
+      "sites": 14
     },
     {
-      "l1": "Energy and Utilities",
-      "zh": "能源与公用事业",
-      "slug": "energy-and-utilities",
-      "task_count": 25,
+      "l1": "Retail and Consumer Goods",
+      "zh": "零售与消费品",
+      "slug": "retail-and-consumer-goods",
+      "task_count": 21,
       "venues": [
         {
-          "en": "Electromechanical Workshop",
-          "zh": "机电车间"
+          "en": "Watch Repair Station",
+          "zh": "修表工作台"
+        },
+        {
+          "en": "Watch Store",
+          "zh": "钟表店"
+        },
+        {
+          "en": "Flower Shop",
+          "zh": "花店"
         }
       ],
       "eps": [
         {
-          "video": "v/3b60205a.mp4",
-          "poster": "p/3b60205a.jpg",
-          "dur": 329,
+          "video": "v/278ecfad.mp4",
+          "poster": "p/278ecfad.jpg",
+          "dur": 328,
           "lv": "hard",
-          "task_id": "electronic_device_disassembly_and_assembly",
-          "task_zh": "电子电气设备拆装",
-          "task_en": "Electronic device disassembly and assembly",
-          "desc_zh": "维修技术员重新组装电能表，将控制器电路板装入外壳，并用螺丝刀固定前盖和端子盖。",
-          "desc_en": "Maintenance technician reassembles an electricity meter, seating the controller circuit board in its housing and fastening the front and terminal covers with screwdrivers.",
-          "reason_zh": "本段视频大部分时间是用螺丝刀精细操作小螺丝，同时将电路板装入电子仪表并安装外壳盖板。电表维修和装配被认可为高难度。",
-          "reason_en": "Most of the episode is precise screwdriver work on small screws while seating a circuit board and fitting housing covers on an electronic meter. Meter repair and assembly is accepted as hard.",
-          "skill": "Electronics & Diagnostics",
-          "skill_zh": "电子与诊断",
-          "job": "Maintenance technician",
-          "job_zh": "设备维护技师",
-          "l2": "Electromechanical Workshop",
-          "l2_zh": "机电车间",
-          "l1": "Energy and Utilities"
-        },
-        {
-          "video": "v/b8f7d305.mp4",
-          "poster": "p/b8f7d305.jpg",
-          "dur": 331,
-          "lv": "hard",
-          "task_id": "valve_disassembly_and_servicing",
-          "task_zh": "阀门执行器检修",
-          "task_en": "Valve disassembly and servicing",
-          "desc_zh": "维修技术员在电厂用扳手和内六角扳手调整气动阀门执行器及其限位开关支架，并将其重新安装到管道阀门上。",
-          "desc_en": "Maintenance technician adjusts and refits a pneumatic valve actuator and its limit switch bracket onto a pipeline valve at a power plant, using wrenches and hex keys.",
-          "reason_zh": "本段视频大部分时间是用扳手和内六角扳手将气动执行器和限位开关支架对准并安装到阀杆上。这属于包含多个前后相互依赖步骤的专业工作，对不准会导致设备故障。",
-          "reason_en": "Most of the episode is spent aligning and mounting a pneumatic actuator and limit switch bracket on a valve stem with wrenches and hex keys. This is trade work with several dependent steps, where misalignment would cause malfunction.",
+          "task_id": "watch_repair",
+          "task_zh": "钟表维修",
+          "task_en": "Watch repair",
+          "desc_zh": "修表师傅打开手表后盖，用镊子和螺丝刀调整机芯和后盖圈，然后重新组装并检查手表。",
+          "desc_en": "Watch repairer opens a wristwatch caseback, adjusts the movement and caseback ring with tweezers and screwdrivers, then reassembles and checks the watch.",
+          "reason_zh": "主要活动是修表：打开表壳，用镊子和精密螺丝刀调整机芯的小零件。这是针对微小零件的精细操作，客户已认可修表属于困难级别。",
+          "reason_en": "The main activity is watch repair: opening the case and adjusting the small movement parts with tweezers and fine screwdrivers. This is precision work on tiny parts, and the client has accepted watch repair as hard.",
           "skill": "Repair & Maintenance",
           "skill_zh": "维修保养",
-          "job": "Maintenance technician",
-          "job_zh": "设备维护技师",
-          "l2": "Electromechanical Workshop",
-          "l2_zh": "机电车间",
-          "l1": "Energy and Utilities"
+          "job": "Watch repairer",
+          "job_zh": "修表师",
+          "l2": "Watch Repair Station",
+          "l2_zh": "修表工作台",
+          "l1": "Retail and Consumer Goods"
         },
         {
-          "video": "v/6ac36c1b.mp4",
-          "poster": "p/6ac36c1b.jpg",
-          "dur": 325,
+          "video": "v/77a2aa7e.mp4",
+          "poster": "p/77a2aa7e.jpg",
+          "dur": 487,
           "lv": "hard",
-          "task_id": "electrical_wire_termination_and_connection",
-          "task_zh": "电气接线端子作业",
-          "task_en": "Electrical wire termination and connection",
-          "desc_zh": "工人用螺丝刀拧紧设备电气控制柜内接触器和断路器上的端子螺丝，逐排检查接线。",
-          "desc_en": "Worker uses screwdrivers to tighten terminal screws on contactors and breakers inside an equipment electrical control cabinet, checking wiring connections row by row.",
-          "reason_zh": "视频大部分时间是对电气柜内接触器的小端子螺丝进行精细的螺丝刀操作。接线松动或拧得过紧都可能引发电气故障，因此这项工作需要专业知识并且要细心。",
-          "reason_en": "Most of the episode is precise screwdriver work on small terminal screws of contactors in an electrical panel. A loose or over-tightened connection can cause electrical faults, so the work needs trade knowledge and care.",
+          "task_id": "floral_arrangement_making",
+          "task_zh": "花艺制作",
+          "task_en": "Floral arrangement making",
+          "desc_zh": "花艺师用黄玫瑰和百合制作一束包装好的仿真花束，加入花枝，用包装纸包好并系上丝带，再加上一个毛绒饰件。",
+          "desc_en": "Florist builds a wrapped artificial bouquet of yellow roses and lilies, adds stems, wraps it in paper with a ribbon, and adds a plush topper.",
+          "reason_zh": "本段大部分内容是核心的花艺设计。花艺师搭配并层叠花枝，包装并捆扎花束，判断其平衡感和完成效果，类似于蛋糕装饰。这属于技艺性工作，而非辅助工作。",
+          "reason_en": "Most of the episode is core floral design. The florist composes and layers the stems, wraps and ties the bouquet, and judges its balance and finish, much like cake decorating. This is skilled craft work, not support work.",
           "skill": "Assembly & Installation",
           "skill_zh": "组装与安装",
-          "job": "Maintenance technician",
-          "job_zh": "设备维护技师",
-          "l2": "Electromechanical Workshop",
-          "l2_zh": "机电车间",
-          "l1": "Energy and Utilities"
+          "job": "Florist",
+          "job_zh": "花艺师",
+          "l2": "Flower Shop",
+          "l2_zh": "花店",
+          "l1": "Retail and Consumer Goods"
+        },
+        {
+          "video": "v/969ed4fb.mp4",
+          "poster": "p/969ed4fb.jpg",
+          "dur": 374,
+          "lv": "hard",
+          "task_id": "key_fob_battery_replacement",
+          "task_zh": "车钥匙换电池",
+          "task_en": "Key fob battery replacement",
+          "desc_zh": "在杂乱的维修台前，工人打开一个金色车钥匙遥控器，用镊子和小螺丝刀更换纽扣电池，然后重新装好外壳。",
+          "desc_en": "At a cluttered repair bench, the worker opens a gold car key fob, replaces its coin battery with tweezers and a small screwdriver, and reassembles the casing.",
+          "reason_zh": "本段大部分时间是在拆开钥匙遥控器，处理其小型电路板和电池触点。这需要精准操控镊子和精密螺丝刀，与客户认可为困难的锁具和仪表维修工作高度相符。",
+          "reason_en": "Most of the episode is opening a key fob and handling its small circuit board and battery contacts. This takes precise control of tweezers and a fine screwdriver, and it closely matches the lock and meter repair work the client accepts as hard.",
+          "skill": "Repair & Maintenance",
+          "skill_zh": "维修保养",
+          "job": "Watch repairer",
+          "job_zh": "修表师",
+          "l2": "Watch Store",
+          "l2_zh": "钟表店",
+          "l1": "Retail and Consumer Goods"
         }
       ],
-      "sites": 1
+      "sites": 10
+    },
+    {
+      "l1": "Beauty and Personal Care",
+      "zh": "美容与个人护理",
+      "slug": "beauty-and-personal-care",
+      "task_count": 16,
+      "venues": [
+        {
+          "en": "Barber Shop",
+          "zh": "理发店"
+        },
+        {
+          "en": "Spa",
+          "zh": "足疗养生馆"
+        },
+        {
+          "en": "Nail Salon",
+          "zh": "美甲店"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/fa8a564c.mp4",
+          "poster": "p/fa8a564c.jpg",
+          "dur": 331,
+          "lv": "hard",
+          "task_id": "salon_hair_coloring",
+          "task_zh": "染发",
+          "task_en": "Salon hair coloring",
+          "desc_zh": "发型师在碗中调配染发剂，然后为坐着的顾客将头发分区，用染发刷上色，最后用塑料膜包住头部。",
+          "desc_en": "Hair stylist prepares dye in a bowl, then sections the seated customer's hair and applies the color with a tint brush, finally wrapping the head in plastic.",
+          "reason_zh": "本片段大部分时间是手工涂抹染发剂。发型师将头发分区，用染发刷和梳子均匀涂抹，这需要经过训练的技法和质量判断；涂抹不均会导致返工。",
+          "reason_en": "Most of the episode is hands-on dye application. The stylist sections the hair and coats it evenly with a tint brush and comb, which takes trained technique and quality judgement; uneven coverage leads to rework.",
+          "skill": "Tool Use & Technical Manipulation",
+          "skill_zh": "工具使用与技术操作",
+          "job": "Hair stylist",
+          "job_zh": "发型师",
+          "l2": "Barber Shop",
+          "l2_zh": "理发店",
+          "l1": "Beauty and Personal Care"
+        },
+        {
+          "video": "v/4be1d0be.mp4",
+          "poster": "p/4be1d0be.jpg",
+          "dur": 335,
+          "lv": "hard",
+          "task_id": "salon_hair_styling",
+          "task_zh": "吹发造型",
+          "task_en": "Salon hair styling",
+          "desc_zh": "用手持吹风机吹干坐着的客户的湿长发，用手指挑起并分开发束，直到头发吹干变直。",
+          "desc_en": "Blow-drying a seated client's long wet hair with a hand-held dryer, lifting and separating sections with the fingers until the hair is dry and straight.",
+          "reason_zh": "整个片段中，员工都在用工具吹头发，控制吹风机的角度和距离，同时用手给头发分区。以有实际意义的工具使用为主要活动算作困难。",
+          "reason_en": "For the whole episode the worker blow-dries the hair with a tool, controlling dryer angle and distance while sectioning the hair by hand. Meaningful tool use as the main activity counts as hard.",
+          "skill": "Tool Use & Technical Manipulation",
+          "skill_zh": "工具使用与技术操作",
+          "job": "Barber",
+          "job_zh": "理发师",
+          "l2": "Barber Shop",
+          "l2_zh": "理发店",
+          "l1": "Beauty and Personal Care"
+        }
+      ],
+      "sites": 9
     },
     {
       "l1": "Education and Training",
@@ -360,472 +510,7 @@
           "l1": "Education and Training"
         }
       ],
-      "sites": 4
-    },
-    {
-      "l1": "Food and Beverage",
-      "zh": "餐饮",
-      "slug": "food-and-beverage",
-      "task_count": 27,
-      "venues": [
-        {
-          "en": "Cake Shop",
-          "zh": "蛋糕店"
-        },
-        {
-          "en": "Coffee Shop",
-          "zh": "咖啡店"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/b63e185d.mp4",
-          "poster": "p/b63e185d.jpg",
-          "dur": 330,
-          "lv": "hard",
-          "task_id": "cake_assembly_and_frosting",
-          "task_zh": "蛋糕夹层抹面",
-          "task_en": "Cake assembly and frosting",
-          "desc_zh": "工人在手机上核对订单，用圆形切模切出圆形海绵蛋糕片，然后在海绵蛋糕层之间铺上芒果和奶油，并用抹刀给蛋糕抹面。",
-          "desc_en": "Worker checks a phone order, cuts sponge rounds with a ring cutter, then layers mango and cream between sponge layers and frosts the cake with a spatula.",
-          "reason_zh": "本段大部分时间是切圆形海绵蛋糕片、用刀切芒果，以及在转台上用抹刀铺奶油分层并抹平。这些精细的工具操作符合客户认可为高难度的蛋糕组装和食材准备。",
-          "reason_en": "Most of the episode is cutting sponge rounds, slicing mango with a knife, and layering and smoothing cream with a palette knife on a turntable. This precise tool work matches the cake assembly and ingredient prep that the client accepts as hard.",
-          "skill": "Food Preparation & Cooking",
-          "skill_zh": "食品制作与烹饪",
-          "job": "Cake decorator",
-          "job_zh": "蛋糕裱花师",
-          "l2": "Cake Shop",
-          "l2_zh": "蛋糕店",
-          "l1": "Food and Beverage"
-        },
-        {
-          "video": "v/0b0d5125.mp4",
-          "poster": "p/0b0d5125.jpg",
-          "dur": 334,
-          "lv": "hard",
-          "task_id": "cake_decorating",
-          "task_zh": "蛋糕裱花装饰",
-          "task_en": "Cake decorating",
-          "desc_zh": "蛋糕裱花师用抹刀和裱花袋，在两个已抹好奶油的蛋糕上刮掉并重新挤出奶油旋花装饰，然后把边缘抹平。",
-          "desc_en": "Cake decorator scrapes off and re-pipes swirl cream decorations on two cream-covered cakes using a palette knife and piping bag, then smooths edges.",
-          "reason_zh": "本片段大部分时间是用裱花袋和抹刀精细制作旋花装饰，包括修正和重做装饰，这与蛋糕裱花类工作的困难评级相符。",
-          "reason_en": "Most of the episode is precise piping and palette-knife work on swirl decorations. This includes correcting and redoing the decoration, which matches the hard rating for cake decorating with piping.",
-          "skill": "Food Preparation & Cooking",
-          "skill_zh": "食品制作与烹饪",
-          "job": "Cake decorator",
-          "job_zh": "蛋糕裱花师",
-          "l2": "Cake Shop",
-          "l2_zh": "蛋糕店",
-          "l1": "Food and Beverage"
-        },
-        {
-          "video": "v/2c47611c.mp4",
-          "poster": "p/2c47611c.jpg",
-          "dur": 343,
-          "lv": "hard",
-          "task_id": "bakery_ingredient_prep",
-          "task_zh": "烘焙备料",
-          "task_en": "Bakery ingredient prep",
-          "desc_zh": "烘焙师从搅拌机的搅拌缸里舀出黄油酥粒馅料，装进塑料裱花袋，然后用刮板把馅料往下推压，并封好袋子备用。",
-          "desc_en": "Baker scoops butter-crumb filling from the mixer bowl into a plastic piping bag, then uses scrapers to push the filling down and seal the bag for later use.",
-          "reason_zh": "本段大部分时间是食材准备：用刮板和刮刀往裱花袋里装料并压实。在食材准备中使用工具评为困难，在困难和中等之间拿不准时选择较高等级。",
-          "reason_en": "Most of the episode is ingredient prep: filling and compacting a piping bag with a scraper and spatula. Tool use in ingredient prep is rated hard, and when unsure between hard and medium the higher level is chosen.",
-          "skill": "Food Preparation & Cooking",
-          "skill_zh": "食品制作与烹饪",
-          "job": "Baker",
-          "job_zh": "烘焙师",
-          "l2": "Cake Shop",
-          "l2_zh": "蛋糕店",
-          "l1": "Food and Beverage"
-        }
-      ],
-      "sites": 7
-    },
-    {
-      "l1": "Retail and Consumer Goods",
-      "zh": "零售与消费品",
-      "slug": "retail-and-consumer-goods",
-      "task_count": 21,
-      "venues": [
-        {
-          "en": "Watch Repair Station",
-          "zh": "修表工作台"
-        },
-        {
-          "en": "Watch Store",
-          "zh": "钟表店"
-        },
-        {
-          "en": "Flower Shop",
-          "zh": "花店"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/278ecfad.mp4",
-          "poster": "p/278ecfad.jpg",
-          "dur": 328,
-          "lv": "hard",
-          "task_id": "watch_repair",
-          "task_zh": "钟表维修",
-          "task_en": "Watch repair",
-          "desc_zh": "修表师傅打开手表后盖，用镊子和螺丝刀调整机芯和后盖圈，然后重新组装并检查手表。",
-          "desc_en": "Watch repairer opens a wristwatch caseback, adjusts the movement and caseback ring with tweezers and screwdrivers, then reassembles and checks the watch.",
-          "reason_zh": "主要活动是修表：打开表壳，用镊子和精密螺丝刀调整机芯的小零件。这是针对微小零件的精细操作，客户已认可修表属于困难级别。",
-          "reason_en": "The main activity is watch repair: opening the case and adjusting the small movement parts with tweezers and fine screwdrivers. This is precision work on tiny parts, and the client has accepted watch repair as hard.",
-          "skill": "Repair & Maintenance",
-          "skill_zh": "维修保养",
-          "job": "Watch repairer",
-          "job_zh": "修表师",
-          "l2": "Watch Repair Station",
-          "l2_zh": "修表工作台",
-          "l1": "Retail and Consumer Goods"
-        },
-        {
-          "video": "v/77a2aa7e.mp4",
-          "poster": "p/77a2aa7e.jpg",
-          "dur": 487,
-          "lv": "hard",
-          "task_id": "floral_arrangement_making",
-          "task_zh": "花艺制作",
-          "task_en": "Floral arrangement making",
-          "desc_zh": "花艺师用黄玫瑰和百合制作一束包装好的仿真花束，加入花枝，用包装纸包好并系上丝带，再加上一个毛绒饰件。",
-          "desc_en": "Florist builds a wrapped artificial bouquet of yellow roses and lilies, adds stems, wraps it in paper with a ribbon, and adds a plush topper.",
-          "reason_zh": "本段大部分内容是核心的花艺设计。花艺师搭配并层叠花枝，包装并捆扎花束，判断其平衡感和完成效果，类似于蛋糕装饰。这属于技艺性工作，而非辅助工作。",
-          "reason_en": "Most of the episode is core floral design. The florist composes and layers the stems, wraps and ties the bouquet, and judges its balance and finish, much like cake decorating. This is skilled craft work, not support work.",
-          "skill": "Assembly & Installation",
-          "skill_zh": "组装与安装",
-          "job": "Florist",
-          "job_zh": "花艺师",
-          "l2": "Flower Shop",
-          "l2_zh": "花店",
-          "l1": "Retail and Consumer Goods"
-        },
-        {
-          "video": "v/969ed4fb.mp4",
-          "poster": "p/969ed4fb.jpg",
-          "dur": 374,
-          "lv": "hard",
-          "task_id": "key_fob_battery_replacement",
-          "task_zh": "车钥匙换电池",
-          "task_en": "Key fob battery replacement",
-          "desc_zh": "在杂乱的维修台前，工人打开一个金色车钥匙遥控器，用镊子和小螺丝刀更换纽扣电池，然后重新装好外壳。",
-          "desc_en": "At a cluttered repair bench, the worker opens a gold car key fob, replaces its coin battery with tweezers and a small screwdriver, and reassembles the casing.",
-          "reason_zh": "本段大部分时间是在拆开钥匙遥控器，处理其小型电路板和电池触点。这需要精准操控镊子和精密螺丝刀，与客户认可为困难的锁具和仪表维修工作高度相符。",
-          "reason_en": "Most of the episode is opening a key fob and handling its small circuit board and battery contacts. This takes precise control of tweezers and a fine screwdriver, and it closely matches the lock and meter repair work the client accepts as hard.",
-          "skill": "Repair & Maintenance",
-          "skill_zh": "维修保养",
-          "job": "Watch repairer",
-          "job_zh": "修表师",
-          "l2": "Watch Store",
-          "l2_zh": "钟表店",
-          "l1": "Retail and Consumer Goods"
-        }
-      ],
-      "sites": 5
-    },
-    {
-      "l1": "Creative Workshops",
-      "zh": "创意工坊",
-      "slug": "creative-workshops",
-      "task_count": 4,
-      "venues": [
-        {
-          "en": "Handcraft Workshop",
-          "zh": "手工艺工坊"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/94825c08.mp4",
-          "poster": "p/94825c08.jpg",
-          "dur": 331,
-          "lv": "hard",
-          "task_id": "gourd_carving",
-          "task_zh": "葫芦雕刻与烙画",
-          "task_en": "Gourd carving",
-          "desc_zh": "工人用加热的烙画笔在干燥葫芦上烙出竹子图案和中文文字，然后调节工具的温控器。",
-          "desc_en": "Worker uses a heated pyrography pen to burn bamboo designs and Chinese text onto a dried gourd, then adjusts the tool's temperature controller.",
-          "reason_zh": "几乎整个片段中，工人都在精准控制加热的烙画笔，在弧形葫芦上画出精细的线条和书法。失误无法挽回，因此这项工作需要经过训练的技艺。",
-          "reason_en": "For almost the whole episode the worker controls a heated pyrography pen precisely, drawing fine lines and calligraphy on a curved gourd. Mistakes cannot be undone, so the work needs trained technique.",
-          "skill": "Tool Use & Technical Manipulation",
-          "skill_zh": "工具使用与技术操作",
-          "job": "Woodworker",
-          "job_zh": "木工手艺人",
-          "l2": "Handcraft Workshop",
-          "l2_zh": "手工艺工坊",
-          "l1": "Creative Workshops"
-        },
-        {
-          "video": "v/93d99a4e.mp4",
-          "poster": "p/93d99a4e.jpg",
-          "dur": 315,
-          "lv": "hard",
-          "task_id": "computer_hardware_assembly_and_testing",
-          "task_zh": "电脑硬件拆装测试",
-          "task_en": "Computer hardware assembly and testing",
-          "desc_zh": "技术人员把台式机机箱里的电源拆下后重新装上，并把电源线重新接到主板和硬盘上。",
-          "desc_en": "Technician removes and reinstalls the power supply unit in a desktop PC case and reconnects its power cables to the motherboard and drives.",
-          "reason_zh": "本段大部分是电脑组装：安装电源，布置内部电源接头并将其插到正确的部件上。客户认可电脑组装为困难级别。",
-          "reason_en": "Most of the episode is PC assembly: fitting the PSU and routing and mating internal power connectors to the correct components. The client accepts PC assembly as hard.",
-          "skill": "Assembly & Installation",
-          "skill_zh": "组装与安装",
-          "job": "Computer repair technician",
-          "job_zh": "电脑维修技师",
-          "l2": "Handcraft Workshop",
-          "l2_zh": "手工艺工坊",
-          "l1": "Creative Workshops"
-        }
-      ],
-      "sites": 2
-    },
-    {
-      "l1": "Healthcare and Pharmacy",
-      "zh": "医疗与药房",
-      "slug": "healthcare-and-pharmacy",
-      "task_count": 14,
-      "venues": [
-        {
-          "en": "Medical Clinic",
-          "zh": "医疗诊室"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/76c35348.mp4",
-          "poster": "p/76c35348.jpg",
-          "dur": 332,
-          "lv": "hard",
-          "task_id": "electronic_device_disassembly_and_assembly",
-          "task_zh": "电子电气设备拆装",
-          "task_en": "Electronic device disassembly and assembly",
-          "desc_zh": "在一台已打开的医疗设备内重新安装电路板，重新连接内部线路和连接器，并查看手机上的照片作为参考。",
-          "desc_en": "Reseating a circuit board and reconnecting internal wiring and connectors inside an opened medical device, checking a phone photo for reference.",
-          "reason_zh": "主要活动是电路板维修。工作人员用螺丝刀在设备内部重新安装电路板并装上小型导线连接器，同时对照参考照片检查结果。客户将电路板维修认可为高难度。",
-          "reason_en": "The main activity is circuit board repair. The worker reseats boards and fits small wire connectors inside the device with a screwdriver, checking the result against reference photos. The client accepts circuit board repair as hard.",
-          "skill": "Electronics & Diagnostics",
-          "skill_zh": "电子与诊断",
-          "job": "Caregiver",
-          "job_zh": "护工",
-          "l2": "Medical Clinic",
-          "l2_zh": "医疗诊室",
-          "l1": "Healthcare and Pharmacy"
-        },
-        {
-          "video": "v/a30ab761.mp4",
-          "poster": "p/a30ab761.jpg",
-          "dur": 334,
-          "lv": "hard",
-          "task_id": "electronic_device_disassembly_and_assembly",
-          "task_zh": "电子电气设备拆装",
-          "task_en": "Electronic device disassembly and assembly",
-          "desc_zh": "工作人员在床上拆解一台电疗医疗设备，用螺丝刀拧下螺丝，从机壳中取出电源模块和主电路板。",
-          "desc_en": "Worker disassembles an electrotherapy medical device on a bed, unscrewing and removing the power module and main circuit board from the enclosure with a screwdriver.",
-          "reason_zh": "本片段大部分时间是在拆解一台电子医疗设备。这需要用螺丝刀精细处理小螺丝和电路板，并小心处理线路，失误有损坏设备的风险。",
-          "reason_en": "Most of the episode is taking apart an electronic medical device. This needs precise screwdriver work on small screws and circuit boards and careful wire handling, where mistakes risk damage.",
-          "skill": "Repair & Maintenance",
-          "skill_zh": "维修保养",
-          "job": "Caregiver",
-          "job_zh": "护工",
-          "l2": "Medical Clinic",
-          "l2_zh": "医疗诊室",
-          "l1": "Healthcare and Pharmacy"
-        }
-      ],
-      "sites": 3
-    },
-    {
-      "l1": "Beauty and Personal Care",
-      "zh": "美容与个人护理",
-      "slug": "beauty-and-personal-care",
-      "task_count": 16,
-      "venues": [
-        {
-          "en": "Barber Shop",
-          "zh": "理发店"
-        },
-        {
-          "en": "Spa",
-          "zh": "足疗养生馆"
-        },
-        {
-          "en": "Nail Salon",
-          "zh": "美甲店"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/fa8a564c.mp4",
-          "poster": "p/fa8a564c.jpg",
-          "dur": 331,
-          "lv": "hard",
-          "task_id": "salon_hair_coloring",
-          "task_zh": "染发",
-          "task_en": "Salon hair coloring",
-          "desc_zh": "发型师在碗中调配染发剂，然后为坐着的顾客将头发分区，用染发刷上色，最后用塑料膜包住头部。",
-          "desc_en": "Hair stylist prepares dye in a bowl, then sections the seated customer's hair and applies the color with a tint brush, finally wrapping the head in plastic.",
-          "reason_zh": "本片段大部分时间是手工涂抹染发剂。发型师将头发分区，用染发刷和梳子均匀涂抹，这需要经过训练的技法和质量判断；涂抹不均会导致返工。",
-          "reason_en": "Most of the episode is hands-on dye application. The stylist sections the hair and coats it evenly with a tint brush and comb, which takes trained technique and quality judgement; uneven coverage leads to rework.",
-          "skill": "Tool Use & Technical Manipulation",
-          "skill_zh": "工具使用与技术操作",
-          "job": "Hair stylist",
-          "job_zh": "发型师",
-          "l2": "Barber Shop",
-          "l2_zh": "理发店",
-          "l1": "Beauty and Personal Care"
-        },
-        {
-          "video": "v/4be1d0be.mp4",
-          "poster": "p/4be1d0be.jpg",
-          "dur": 335,
-          "lv": "hard",
-          "task_id": "salon_hair_styling",
-          "task_zh": "吹发造型",
-          "task_en": "Salon hair styling",
-          "desc_zh": "用手持吹风机吹干坐着的客户的湿长发，用手指挑起并分开发束，直到头发吹干变直。",
-          "desc_en": "Blow-drying a seated client's long wet hair with a hand-held dryer, lifting and separating sections with the fingers until the hair is dry and straight.",
-          "reason_zh": "整个片段中，员工都在用工具吹头发，控制吹风机的角度和距离，同时用手给头发分区。以有实际意义的工具使用为主要活动算作困难。",
-          "reason_en": "For the whole episode the worker blow-dries the hair with a tool, controlling dryer angle and distance while sectioning the hair by hand. Meaningful tool use as the main activity counts as hard.",
-          "skill": "Tool Use & Technical Manipulation",
-          "skill_zh": "工具使用与技术操作",
-          "job": "Barber",
-          "job_zh": "理发师",
-          "l2": "Barber Shop",
-          "l2_zh": "理发店",
-          "l1": "Beauty and Personal Care"
-        }
-      ],
       "sites": 6
-    },
-    {
-      "l1": "Printing and Design",
-      "zh": "印刷与设计",
-      "slug": "printing-and-design",
-      "task_count": 12,
-      "venues": [
-        {
-          "en": "Print Shop",
-          "zh": "印刷厂"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/e09d8983.mp4",
-          "poster": "p/e09d8983.jpg",
-          "dur": 328,
-          "lv": "hard",
-          "task_id": "packaging_sample_box_making",
-          "task_zh": "包装样盒制作",
-          "task_en": "Packaging sample box making",
-          "desc_zh": "工人给印刷纸和白纸上胶，把灰板放到纸上，然后包边并压实，制作硬质包装样品盒盖。",
-          "desc_en": "Worker glues printed and white paper sheets, lays grey board panels onto them, and wraps and presses the edges to make rigid packaging sample covers.",
-          "reason_zh": "主要活动是手工制作硬盒盒盖。需要将板片精确对齐贴在上过胶的纸上，包边、折边，并用手工工具压实，一旦对不齐就要返工。",
-          "reason_en": "The main activity is hand-building rigid box covers. It needs precise alignment of board panels on glued paper, wrapping and folding the edges, and pressing with a hand tool, where misalignment means rework.",
-          "skill": "Tool Use & Technical Manipulation",
-          "skill_zh": "工具使用与技术操作",
-          "job": "Production worker",
-          "job_zh": "生产工人",
-          "l2": "Print Shop",
-          "l2_zh": "印刷厂",
-          "l1": "Printing and Design"
-        },
-        {
-          "video": "v/a028d2a7.mp4",
-          "poster": "p/a028d2a7.jpg",
-          "dur": 343,
-          "lv": "hard",
-          "task_id": "packaging_dieline_design_and_plotter_cutting",
-          "task_zh": "包装刀版设计与切割",
-          "task_en": "Packaging dieline design and plotter cutting",
-          "desc_zh": "工人在电脑上修改包装刀线切割文件，取来金卡板并用胶带固定在平板切割机上，然后运行切割并进行监看。",
-          "desc_en": "Worker edits a packaging dieline cut file on the computer, fetches and tapes gold board sheets onto a flatbed plotter, then runs and monitors the cuts.",
-          "reason_zh": "主要活动是操作精密平板切割机：修改切割文件，对齐纸张并用胶带固定，用尺子测量，启动切割。操作精密切割机（包括设置和取料）算作困难。",
-          "reason_en": "The main activity is operating a precision flatbed cutting plotter: editing the cut file, aligning and taping sheets, measuring with a ruler and starting the cuts. Operating a precision cutter, including setup and fetching material, counts as hard.",
-          "skill": "Tool Use & Technical Manipulation",
-          "skill_zh": "工具使用与技术操作",
-          "job": "Production worker",
-          "job_zh": "生产工人",
-          "l2": "Print Shop",
-          "l2_zh": "印刷厂",
-          "l1": "Printing and Design"
-        }
-      ],
-      "sites": 1
-    },
-    {
-      "l1": "Construction and Hardware",
-      "zh": "建筑与五金",
-      "slug": "construction-and-hardware",
-      "task_count": 16,
-      "venues": [
-        {
-          "en": "Renovation Company",
-          "zh": "装修公司"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/6f7149f7.mp4",
-          "poster": "p/6f7149f7.jpg",
-          "dur": 334,
-          "lv": "hard",
-          "task_id": "interior_wall_chase_chiseling",
-          "task_zh": "墙面开槽",
-          "task_en": "Interior wall chase chiseling",
-          "desc_zh": "工人用角磨机和电锤在墙面与天花板交角处、围绕红色线管切割并凿出布线槽。",
-          "desc_en": "Worker cuts and chisels a wiring chase into the wall and ceiling corner around a red conduit using an angle grinder and rotary hammer.",
-          "reason_zh": "本段大部分时间是在头顶上方受控地使用角磨机和电锤，在带电线管和电线旁开出精确的线槽。操作失误可能损坏线管，并带来安全隐患。",
-          "reason_en": "Most of the episode is controlled overhead work with an angle grinder and a rotary hammer, cutting a precise chase beside live conduit and wiring. Mistakes risk damaging the conduit and pose a safety hazard.",
-          "skill": "Construction & Building",
-          "skill_zh": "建筑施工",
-          "job": "Construction manager",
-          "job_zh": "施工经理",
-          "l2": "Renovation Company",
-          "l2_zh": "装修公司",
-          "l1": "Construction and Hardware"
-        },
-        {
-          "video": "v/975ad5f7.mp4",
-          "poster": "p/975ad5f7.jpg",
-          "dur": 319,
-          "lv": "hard",
-          "task_id": "led_strip_light_installation",
-          "task_zh": "LED 灯带安装",
-          "task_en": "LED strip light installation",
-          "desc_zh": "沿门口所在的墙将柔性LED灯罩条压入弧形吊顶槽，然后用剪钳和美工刀剪掉多余部分。",
-          "desc_en": "Pressing a flexible LED light diffuser strip into a curved ceiling slot along the doorway wall, then trimming the excess with cutters and a utility knife.",
-          "reason_zh": "主要活动是把已通电的LED灯罩条均匀装进弧形吊顶灯槽，并用剪钳和美工刀裁到合适长度，属于安装类的裁切与安装作业。",
-          "reason_en": "The main activity is fitting a lit LED diffuser strip evenly into a curved ceiling channel and cutting it to length with cutters and a utility knife, which is installation cutting-and-fitting work.",
-          "skill": "Assembly & Installation",
-          "skill_zh": "组装与安装",
-          "job": "Construction manager",
-          "job_zh": "施工经理",
-          "l2": "Renovation Company",
-          "l2_zh": "装修公司",
-          "l1": "Construction and Hardware"
-        },
-        {
-          "video": "v/f9de520a.mp4",
-          "poster": "p/f9de520a.jpg",
-          "dur": 332,
-          "lv": "hard",
-          "task_id": "wall_ceiling_plaster_filling",
-          "task_zh": "吊顶护角与批腻子",
-          "task_en": "Wall ceiling plaster filling",
-          "desc_zh": "工人沿窗户上方的弧形吊顶箱体边安装塑料护角条，并用刮刀和抹子在上面薄批一层腻子。",
-          "desc_en": "Worker installs plastic corner beads along a curved ceiling box edge over a window and skim-coats them with putty using knives and trowels.",
-          "reason_zh": "本段大部分是精细的手工工具作业：在弧形顶棚边对齐护角条，并用刮刀和抹子把腻子收薄抹平。这需要专业手艺，以及对完成面质量的判断。",
-          "reason_en": "Most of the episode is precise hand-tool work: aligning corner beads on a curved ceiling edge and feathering putty smooth with knives and trowels. This needs trade technique and quality judgement on the finish.",
-          "skill": "Construction & Building",
-          "skill_zh": "建筑施工",
-          "job": "Construction manager",
-          "job_zh": "施工经理",
-          "l2": "Renovation Company",
-          "l2_zh": "装修公司",
-          "l1": "Construction and Hardware"
-        }
-      ],
-      "sites": 2
     },
     {
       "l1": "Automotive and Transport",
@@ -898,6 +583,301 @@
           "l2": "Auto Repair",
           "l2_zh": "汽车维修",
           "l1": "Automotive and Transport"
+        }
+      ],
+      "sites": 6
+    },
+    {
+      "l1": "Healthcare and Pharmacy",
+      "zh": "医疗与药房",
+      "slug": "healthcare-and-pharmacy",
+      "task_count": 14,
+      "venues": [
+        {
+          "en": "Medical Clinic",
+          "zh": "医疗诊室"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/76c35348.mp4",
+          "poster": "p/76c35348.jpg",
+          "dur": 332,
+          "lv": "hard",
+          "task_id": "electronic_device_disassembly_and_assembly",
+          "task_zh": "电子电气设备拆装",
+          "task_en": "Electronic device disassembly and assembly",
+          "desc_zh": "在一台已打开的医疗设备内重新安装电路板，重新连接内部线路和连接器，并查看手机上的照片作为参考。",
+          "desc_en": "Reseating a circuit board and reconnecting internal wiring and connectors inside an opened medical device, checking a phone photo for reference.",
+          "reason_zh": "主要活动是电路板维修。工作人员用螺丝刀在设备内部重新安装电路板并装上小型导线连接器，同时对照参考照片检查结果。客户将电路板维修认可为高难度。",
+          "reason_en": "The main activity is circuit board repair. The worker reseats boards and fits small wire connectors inside the device with a screwdriver, checking the result against reference photos. The client accepts circuit board repair as hard.",
+          "skill": "Electronics & Diagnostics",
+          "skill_zh": "电子与诊断",
+          "job": "Caregiver",
+          "job_zh": "护工",
+          "l2": "Medical Clinic",
+          "l2_zh": "医疗诊室",
+          "l1": "Healthcare and Pharmacy"
+        },
+        {
+          "video": "v/a30ab761.mp4",
+          "poster": "p/a30ab761.jpg",
+          "dur": 334,
+          "lv": "hard",
+          "task_id": "electronic_device_disassembly_and_assembly",
+          "task_zh": "电子电气设备拆装",
+          "task_en": "Electronic device disassembly and assembly",
+          "desc_zh": "工作人员在床上拆解一台电疗医疗设备，用螺丝刀拧下螺丝，从机壳中取出电源模块和主电路板。",
+          "desc_en": "Worker disassembles an electrotherapy medical device on a bed, unscrewing and removing the power module and main circuit board from the enclosure with a screwdriver.",
+          "reason_zh": "本片段大部分时间是在拆解一台电子医疗设备。这需要用螺丝刀精细处理小螺丝和电路板，并小心处理线路，失误有损坏设备的风险。",
+          "reason_en": "Most of the episode is taking apart an electronic medical device. This needs precise screwdriver work on small screws and circuit boards and careful wire handling, where mistakes risk damage.",
+          "skill": "Repair & Maintenance",
+          "skill_zh": "维修保养",
+          "job": "Caregiver",
+          "job_zh": "护工",
+          "l2": "Medical Clinic",
+          "l2_zh": "医疗诊室",
+          "l1": "Healthcare and Pharmacy"
+        }
+      ],
+      "sites": 4
+    },
+    {
+      "l1": "Cleaning and Sanitation",
+      "zh": "清洁与洗衣",
+      "slug": "cleaning-and-sanitation",
+      "task_count": 2,
+      "venues": [
+        {
+          "en": "Laundry Shop",
+          "zh": "洗衣店"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/67c964e8.mp4",
+          "poster": "p/67c964e8.jpg",
+          "dur": 1122.5,
+          "lv": "hard",
+          "task_id": "garment_sewing_repair_and_alteration",
+          "task_zh": "服装缝制与修改",
+          "task_en": "Garment sewing repair and alteration",
+          "desc_zh": "工人手工拆下并更换一件红色反光夹克的拉链，用工业缝纫机缝上，然后把夹克叠好放到货架上。",
+          "desc_en": "Worker unpicks and replaces the zipper on a red reflective jacket by hand, sews it on with an industrial sewing machine, then folds and shelves the jacket.",
+          "reason_zh": "视频大部分时间是精细的服装修补。工人用拆缝工具和钳子拆下并对齐拉链，然后用工业缝纫机缝上，这需要裁缝技能和精确度。",
+          "reason_en": "Most of the episode is precise garment repair. The worker removes and aligns a zipper with seam tools and pliers, then stitches it with an industrial sewing machine, which needs tailoring skill and accuracy.",
+          "skill": "Clothing & Laundry",
+          "skill_zh": "服装与洗衣",
+          "job": "Dry cleaner worker",
+          "job_zh": "干洗店员工",
+          "l2": "Laundry Shop",
+          "l2_zh": "洗衣店",
+          "l1": "Cleaning and Sanitation"
+        },
+        {
+          "video": "v/c90c2cac.mp4",
+          "poster": "p/c90c2cac.jpg",
+          "dur": 1038,
+          "lv": "hard",
+          "task_id": "garment_sewing_repair_and_alteration",
+          "task_zh": "服装缝制与修改",
+          "task_en": "Garment sewing repair and alteration",
+          "desc_zh": "工人在改衣工位剪下白色条纹带，用工业缝纫机、剪刀和手针缝合将其缝到黑色裤子上。",
+          "desc_en": "Worker cuts white stripe tape and sews it onto black trousers using an industrial sewing machine, scissors and hand needle stitching at the alteration station.",
+          "reason_zh": "本段大部分内容是改衣。工人用剪刀剪带子，在缝纫机针下引导布料，穿针并手工缝合。这是精细的专业工作，出错就得返工。",
+          "reason_en": "Most of the episode is garment alteration. The worker cuts tape with scissors, guides fabric under a sewing machine needle, threads needles and hand-stitches. This is precise trade work where mistakes would mean rework.",
+          "skill": "Clothing & Laundry",
+          "skill_zh": "服装与洗衣",
+          "job": "Dry cleaner worker",
+          "job_zh": "干洗店员工",
+          "l2": "Laundry Shop",
+          "l2_zh": "洗衣店",
+          "l1": "Cleaning and Sanitation"
+        }
+      ],
+      "sites": 3
+    },
+    {
+      "l1": "Creative Workshops",
+      "zh": "创意工坊",
+      "slug": "creative-workshops",
+      "task_count": 4,
+      "venues": [
+        {
+          "en": "Handcraft Workshop",
+          "zh": "手工艺工坊"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/94825c08.mp4",
+          "poster": "p/94825c08.jpg",
+          "dur": 331,
+          "lv": "hard",
+          "task_id": "gourd_carving",
+          "task_zh": "葫芦雕刻与烙画",
+          "task_en": "Gourd carving",
+          "desc_zh": "工人用加热的烙画笔在干燥葫芦上烙出竹子图案和中文文字，然后调节工具的温控器。",
+          "desc_en": "Worker uses a heated pyrography pen to burn bamboo designs and Chinese text onto a dried gourd, then adjusts the tool's temperature controller.",
+          "reason_zh": "几乎整个片段中，工人都在精准控制加热的烙画笔，在弧形葫芦上画出精细的线条和书法。失误无法挽回，因此这项工作需要经过训练的技艺。",
+          "reason_en": "For almost the whole episode the worker controls a heated pyrography pen precisely, drawing fine lines and calligraphy on a curved gourd. Mistakes cannot be undone, so the work needs trained technique.",
+          "skill": "Tool Use & Technical Manipulation",
+          "skill_zh": "工具使用与技术操作",
+          "job": "Woodworker",
+          "job_zh": "木工手艺人",
+          "l2": "Handcraft Workshop",
+          "l2_zh": "手工艺工坊",
+          "l1": "Creative Workshops"
+        },
+        {
+          "video": "v/93d99a4e.mp4",
+          "poster": "p/93d99a4e.jpg",
+          "dur": 315,
+          "lv": "hard",
+          "task_id": "computer_hardware_assembly_and_testing",
+          "task_zh": "电脑硬件拆装测试",
+          "task_en": "Computer hardware assembly and testing",
+          "desc_zh": "技术人员把台式机机箱里的电源拆下后重新装上，并把电源线重新接到主板和硬盘上。",
+          "desc_en": "Technician removes and reinstalls the power supply unit in a desktop PC case and reconnects its power cables to the motherboard and drives.",
+          "reason_zh": "本段大部分是电脑组装：安装电源，布置内部电源接头并将其插到正确的部件上。客户认可电脑组装为困难级别。",
+          "reason_en": "Most of the episode is PC assembly: fitting the PSU and routing and mating internal power connectors to the correct components. The client accepts PC assembly as hard.",
+          "skill": "Assembly & Installation",
+          "skill_zh": "组装与安装",
+          "job": "Computer repair technician",
+          "job_zh": "电脑维修技师",
+          "l2": "Handcraft Workshop",
+          "l2_zh": "手工艺工坊",
+          "l1": "Creative Workshops"
+        }
+      ],
+      "sites": 2
+    },
+    {
+      "l1": "Printing and Design",
+      "zh": "印刷与设计",
+      "slug": "printing-and-design",
+      "task_count": 12,
+      "venues": [
+        {
+          "en": "Print Shop",
+          "zh": "印刷厂"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/e09d8983.mp4",
+          "poster": "p/e09d8983.jpg",
+          "dur": 328,
+          "lv": "hard",
+          "task_id": "packaging_sample_box_making",
+          "task_zh": "包装样盒制作",
+          "task_en": "Packaging sample box making",
+          "desc_zh": "工人给印刷纸和白纸上胶，把灰板放到纸上，然后包边并压实，制作硬质包装样品盒盖。",
+          "desc_en": "Worker glues printed and white paper sheets, lays grey board panels onto them, and wraps and presses the edges to make rigid packaging sample covers.",
+          "reason_zh": "主要活动是手工制作硬盒盒盖。需要将板片精确对齐贴在上过胶的纸上，包边、折边，并用手工工具压实，一旦对不齐就要返工。",
+          "reason_en": "The main activity is hand-building rigid box covers. It needs precise alignment of board panels on glued paper, wrapping and folding the edges, and pressing with a hand tool, where misalignment means rework.",
+          "skill": "Tool Use & Technical Manipulation",
+          "skill_zh": "工具使用与技术操作",
+          "job": "Production worker",
+          "job_zh": "生产工人",
+          "l2": "Print Shop",
+          "l2_zh": "印刷厂",
+          "l1": "Printing and Design"
+        },
+        {
+          "video": "v/a028d2a7.mp4",
+          "poster": "p/a028d2a7.jpg",
+          "dur": 343,
+          "lv": "hard",
+          "task_id": "packaging_dieline_design_and_plotter_cutting",
+          "task_zh": "包装刀版设计与切割",
+          "task_en": "Packaging dieline design and plotter cutting",
+          "desc_zh": "工人在电脑上修改包装刀线切割文件，取来金卡板并用胶带固定在平板切割机上，然后运行切割并进行监看。",
+          "desc_en": "Worker edits a packaging dieline cut file on the computer, fetches and tapes gold board sheets onto a flatbed plotter, then runs and monitors the cuts.",
+          "reason_zh": "主要活动是操作精密平板切割机：修改切割文件，对齐纸张并用胶带固定，用尺子测量，启动切割。操作精密切割机（包括设置和取料）算作困难。",
+          "reason_en": "The main activity is operating a precision flatbed cutting plotter: editing the cut file, aligning and taping sheets, measuring with a ruler and starting the cuts. Operating a precision cutter, including setup and fetching material, counts as hard.",
+          "skill": "Tool Use & Technical Manipulation",
+          "skill_zh": "工具使用与技术操作",
+          "job": "Production worker",
+          "job_zh": "生产工人",
+          "l2": "Print Shop",
+          "l2_zh": "印刷厂",
+          "l1": "Printing and Design"
+        }
+      ],
+      "sites": 2
+    },
+    {
+      "l1": "Construction and Hardware",
+      "zh": "建筑与五金",
+      "slug": "construction-and-hardware",
+      "task_count": 16,
+      "venues": [
+        {
+          "en": "Renovation Company",
+          "zh": "装修公司"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/6f7149f7.mp4",
+          "poster": "p/6f7149f7.jpg",
+          "dur": 334,
+          "lv": "hard",
+          "task_id": "interior_wall_chase_chiseling",
+          "task_zh": "墙面开槽",
+          "task_en": "Interior wall chase chiseling",
+          "desc_zh": "工人用角磨机和电锤在墙面与天花板交角处、围绕红色线管切割并凿出布线槽。",
+          "desc_en": "Worker cuts and chisels a wiring chase into the wall and ceiling corner around a red conduit using an angle grinder and rotary hammer.",
+          "reason_zh": "本段大部分时间是在头顶上方受控地使用角磨机和电锤，在带电线管和电线旁开出精确的线槽。操作失误可能损坏线管，并带来安全隐患。",
+          "reason_en": "Most of the episode is controlled overhead work with an angle grinder and a rotary hammer, cutting a precise chase beside live conduit and wiring. Mistakes risk damaging the conduit and pose a safety hazard.",
+          "skill": "Construction & Building",
+          "skill_zh": "建筑施工",
+          "job": "Construction manager",
+          "job_zh": "施工经理",
+          "l2": "Renovation Company",
+          "l2_zh": "装修公司",
+          "l1": "Construction and Hardware"
+        },
+        {
+          "video": "v/975ad5f7.mp4",
+          "poster": "p/975ad5f7.jpg",
+          "dur": 319,
+          "lv": "hard",
+          "task_id": "led_strip_light_installation",
+          "task_zh": "LED 灯带安装",
+          "task_en": "LED strip light installation",
+          "desc_zh": "沿门口所在的墙将柔性LED灯罩条压入弧形吊顶槽，然后用剪钳和美工刀剪掉多余部分。",
+          "desc_en": "Pressing a flexible LED light diffuser strip into a curved ceiling slot along the doorway wall, then trimming the excess with cutters and a utility knife.",
+          "reason_zh": "主要活动是把已通电的LED灯罩条均匀装进弧形吊顶灯槽，并用剪钳和美工刀裁到合适长度，属于安装类的裁切与安装作业。",
+          "reason_en": "The main activity is fitting a lit LED diffuser strip evenly into a curved ceiling channel and cutting it to length with cutters and a utility knife, which is installation cutting-and-fitting work.",
+          "skill": "Assembly & Installation",
+          "skill_zh": "组装与安装",
+          "job": "Construction manager",
+          "job_zh": "施工经理",
+          "l2": "Renovation Company",
+          "l2_zh": "装修公司",
+          "l1": "Construction and Hardware"
+        },
+        {
+          "video": "v/f9de520a.mp4",
+          "poster": "p/f9de520a.jpg",
+          "dur": 332,
+          "lv": "hard",
+          "task_id": "wall_ceiling_plaster_filling",
+          "task_zh": "吊顶护角与批腻子",
+          "task_en": "Wall ceiling plaster filling",
+          "desc_zh": "工人沿窗户上方的弧形吊顶箱体边安装塑料护角条，并用刮刀和抹子在上面薄批一层腻子。",
+          "desc_en": "Worker installs plastic corner beads along a curved ceiling box edge over a window and skim-coats them with putty using knives and trowels.",
+          "reason_zh": "本段大部分是精细的手工工具作业：在弧形顶棚边对齐护角条，并用刮刀和抹子把腻子收薄抹平。这需要专业手艺，以及对完成面质量的判断。",
+          "reason_en": "Most of the episode is precise hand-tool work: aligning corner beads on a curved ceiling edge and feathering putty smooth with knives and trowels. This needs trade technique and quality judgement on the finish.",
+          "skill": "Construction & Building",
+          "skill_zh": "建筑施工",
+          "job": "Construction manager",
+          "job_zh": "施工经理",
+          "l2": "Renovation Company",
+          "l2_zh": "装修公司",
+          "l1": "Construction and Hardware"
         }
       ],
       "sites": 2
@@ -1054,7 +1034,7 @@
           "l1": "Agriculture and Farming"
         }
       ],
-      "sites": 1
+      "sites": 2
     },
     {
       "l1": "Hospitality",
@@ -1129,6 +1109,81 @@
           "l1": "Hospitality"
         }
       ],
+      "sites": 2
+    },
+    {
+      "l1": "Energy and Utilities",
+      "zh": "能源与公用事业",
+      "slug": "energy-and-utilities",
+      "task_count": 25,
+      "venues": [
+        {
+          "en": "Electromechanical Workshop",
+          "zh": "机电车间"
+        }
+      ],
+      "eps": [
+        {
+          "video": "v/3b60205a.mp4",
+          "poster": "p/3b60205a.jpg",
+          "dur": 329,
+          "lv": "hard",
+          "task_id": "electronic_device_disassembly_and_assembly",
+          "task_zh": "电子电气设备拆装",
+          "task_en": "Electronic device disassembly and assembly",
+          "desc_zh": "维修技术员重新组装电能表，将控制器电路板装入外壳，并用螺丝刀固定前盖和端子盖。",
+          "desc_en": "Maintenance technician reassembles an electricity meter, seating the controller circuit board in its housing and fastening the front and terminal covers with screwdrivers.",
+          "reason_zh": "本段视频大部分时间是用螺丝刀精细操作小螺丝，同时将电路板装入电子仪表并安装外壳盖板。电表维修和装配被认可为高难度。",
+          "reason_en": "Most of the episode is precise screwdriver work on small screws while seating a circuit board and fitting housing covers on an electronic meter. Meter repair and assembly is accepted as hard.",
+          "skill": "Electronics & Diagnostics",
+          "skill_zh": "电子与诊断",
+          "job": "Maintenance technician",
+          "job_zh": "设备维护技师",
+          "l2": "Electromechanical Workshop",
+          "l2_zh": "机电车间",
+          "l1": "Energy and Utilities"
+        },
+        {
+          "video": "v/b8f7d305.mp4",
+          "poster": "p/b8f7d305.jpg",
+          "dur": 331,
+          "lv": "hard",
+          "task_id": "valve_disassembly_and_servicing",
+          "task_zh": "阀门执行器检修",
+          "task_en": "Valve disassembly and servicing",
+          "desc_zh": "维修技术员在电厂用扳手和内六角扳手调整气动阀门执行器及其限位开关支架，并将其重新安装到管道阀门上。",
+          "desc_en": "Maintenance technician adjusts and refits a pneumatic valve actuator and its limit switch bracket onto a pipeline valve at a power plant, using wrenches and hex keys.",
+          "reason_zh": "本段视频大部分时间是用扳手和内六角扳手将气动执行器和限位开关支架对准并安装到阀杆上。这属于包含多个前后相互依赖步骤的专业工作，对不准会导致设备故障。",
+          "reason_en": "Most of the episode is spent aligning and mounting a pneumatic actuator and limit switch bracket on a valve stem with wrenches and hex keys. This is trade work with several dependent steps, where misalignment would cause malfunction.",
+          "skill": "Repair & Maintenance",
+          "skill_zh": "维修保养",
+          "job": "Maintenance technician",
+          "job_zh": "设备维护技师",
+          "l2": "Electromechanical Workshop",
+          "l2_zh": "机电车间",
+          "l1": "Energy and Utilities"
+        },
+        {
+          "video": "v/6ac36c1b.mp4",
+          "poster": "p/6ac36c1b.jpg",
+          "dur": 325,
+          "lv": "hard",
+          "task_id": "electrical_wire_termination_and_connection",
+          "task_zh": "电气接线端子作业",
+          "task_en": "Electrical wire termination and connection",
+          "desc_zh": "工人用螺丝刀拧紧设备电气控制柜内接触器和断路器上的端子螺丝，逐排检查接线。",
+          "desc_en": "Worker uses screwdrivers to tighten terminal screws on contactors and breakers inside an equipment electrical control cabinet, checking wiring connections row by row.",
+          "reason_zh": "视频大部分时间是对电气柜内接触器的小端子螺丝进行精细的螺丝刀操作。接线松动或拧得过紧都可能引发电气故障，因此这项工作需要专业知识并且要细心。",
+          "reason_en": "Most of the episode is precise screwdriver work on small terminal screws of contactors in an electrical panel. A loose or over-tightened connection can cause electrical faults, so the work needs trade knowledge and care.",
+          "skill": "Assembly & Installation",
+          "skill_zh": "组装与安装",
+          "job": "Maintenance technician",
+          "job_zh": "设备维护技师",
+          "l2": "Electromechanical Workshop",
+          "l2_zh": "机电车间",
+          "l1": "Energy and Utilities"
+        }
+      ],
       "sites": 1
     },
     {
@@ -1182,61 +1237,6 @@
           "l2": "Badminton Store",
           "l2_zh": "羽毛球店",
           "l1": "Sports and Recreation"
-        }
-      ],
-      "sites": 1
-    },
-    {
-      "l1": "Cleaning and Sanitation",
-      "zh": "清洁与洗衣",
-      "slug": "cleaning-and-sanitation",
-      "task_count": 2,
-      "venues": [
-        {
-          "en": "Laundry Shop",
-          "zh": "洗衣店"
-        }
-      ],
-      "eps": [
-        {
-          "video": "v/67c964e8.mp4",
-          "poster": "p/67c964e8.jpg",
-          "dur": 1122.5,
-          "lv": "hard",
-          "task_id": "garment_sewing_repair_and_alteration",
-          "task_zh": "服装缝制与修改",
-          "task_en": "Garment sewing repair and alteration",
-          "desc_zh": "工人手工拆下并更换一件红色反光夹克的拉链，用工业缝纫机缝上，然后把夹克叠好放到货架上。",
-          "desc_en": "Worker unpicks and replaces the zipper on a red reflective jacket by hand, sews it on with an industrial sewing machine, then folds and shelves the jacket.",
-          "reason_zh": "视频大部分时间是精细的服装修补。工人用拆缝工具和钳子拆下并对齐拉链，然后用工业缝纫机缝上，这需要裁缝技能和精确度。",
-          "reason_en": "Most of the episode is precise garment repair. The worker removes and aligns a zipper with seam tools and pliers, then stitches it with an industrial sewing machine, which needs tailoring skill and accuracy.",
-          "skill": "Clothing & Laundry",
-          "skill_zh": "服装与洗衣",
-          "job": "Dry cleaner worker",
-          "job_zh": "干洗店员工",
-          "l2": "Laundry Shop",
-          "l2_zh": "洗衣店",
-          "l1": "Cleaning and Sanitation"
-        },
-        {
-          "video": "v/c90c2cac.mp4",
-          "poster": "p/c90c2cac.jpg",
-          "dur": 1038,
-          "lv": "hard",
-          "task_id": "garment_sewing_repair_and_alteration",
-          "task_zh": "服装缝制与修改",
-          "task_en": "Garment sewing repair and alteration",
-          "desc_zh": "工人在改衣工位剪下白色条纹带，用工业缝纫机、剪刀和手针缝合将其缝到黑色裤子上。",
-          "desc_en": "Worker cuts white stripe tape and sews it onto black trousers using an industrial sewing machine, scissors and hand needle stitching at the alteration station.",
-          "reason_zh": "本段大部分内容是改衣。工人用剪刀剪带子，在缝纫机针下引导布料，穿针并手工缝合。这是精细的专业工作，出错就得返工。",
-          "reason_en": "Most of the episode is garment alteration. The worker cuts tape with scissors, guides fabric under a sewing machine needle, threads needles and hand-stitches. This is precise trade work where mistakes would mean rework.",
-          "skill": "Clothing & Laundry",
-          "skill_zh": "服装与洗衣",
-          "job": "Dry cleaner worker",
-          "job_zh": "干洗店员工",
-          "l2": "Laundry Shop",
-          "l2_zh": "洗衣店",
-          "l1": "Cleaning and Sanitation"
         }
       ],
       "sites": 1

@@ -518,8 +518,8 @@ function render(DATA) {
   ];
   document.getElementById("stats").innerHTML = tiles.map(([v, zh, en]) => `<div class="stat"><b>${v}</b><div class="label">${bi(zh, en)}</div></div>`).join("");
   document.getElementById("stats-note").innerHTML = bi(
-    `采集地点是我们三个第一视角项目的合计，同一家店只算一次。下面的案例、场景和任务来自其中一个项目（${S.sites_en} 个地点）。`,
-    `Recording sites are the total across our three egocentric projects, each place counted once. The cases, scenes and tasks below come from one of them (${S.sites_en} sites).`);
+    `采集地点是我们三个第一视角项目的合计，同一家店只算一次；左侧各场景的地点数也按三个项目合计。下面的样片和任务表来自其中一个项目（${S.sites_en} 个地点）。`,
+    `Recording sites are the total across our three egocentric projects, each place counted once; the per-scene site counts cover all three as well. The sample clips and task table below come from one of them (${S.sites_en} sites).`);
 
   // case library
   let current = null; // null = all scenes
