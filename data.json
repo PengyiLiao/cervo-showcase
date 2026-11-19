@@ -1,114 +1,23 @@
 {
   "_说明": "这个文件是网站上的数字、场景、视频卡片、任务表、难度例子、metadata 和设备参数。怎么改见 README.md。改完点 Commit changes，1 到 2 分钟后网站自动更新。",
   "stats": {
-    "hours": 1975.65,
-    "episodes": 19217,
     "hard_pct": 93.7,
     "l1": 17,
-    "sites": "50+",
+    "sites": 107,
     "operators": "100+",
-    "cities": 16,
-    "peak_day": 263.6,
     "days": 14,
     "first_day": "2026-10-29",
     "last_day": "2026-11-11",
     "first_day_en": "Oct 29",
     "last_day_en": "Nov 11, 2026",
-    "task_ids": 237
+    "task_ids": 237,
+    "sites_en": 64
   },
-  "coverage": [
-    {
-      "l1": "Repair Services",
-      "zh": "维修服务",
-      "share": 38.34
-    },
-    {
-      "l1": "Clothing and Fashion",
-      "zh": "服装与时尚",
-      "share": 11.86
-    },
-    {
-      "l1": "Energy and Utilities",
-      "zh": "能源与公用事业",
-      "share": 10.53
-    },
-    {
-      "l1": "Education and Training",
-      "zh": "教育培训",
-      "share": 8.02
-    },
-    {
-      "l1": "Food and Beverage",
-      "zh": "餐饮",
-      "share": 6.98
-    },
-    {
-      "l1": "Retail and Consumer Goods",
-      "zh": "零售与消费品",
-      "share": 6.68
-    },
-    {
-      "l1": "Creative Workshops",
-      "zh": "创意工坊",
-      "share": 3.98
-    },
-    {
-      "l1": "Healthcare and Pharmacy",
-      "zh": "医疗与药房",
-      "share": 3.24
-    },
-    {
-      "l1": "Beauty and Personal Care",
-      "zh": "美容与个人护理",
-      "share": 3.14
-    },
-    {
-      "l1": "Printing and Design",
-      "zh": "印刷与设计",
-      "share": 1.74
-    },
-    {
-      "l1": "Construction and Hardware",
-      "zh": "建筑与五金",
-      "share": 1.28
-    },
-    {
-      "l1": "Automotive and Transport",
-      "zh": "汽车与交通",
-      "share": 1.22
-    },
-    {
-      "l1": "Laboratory / Scientific",
-      "zh": "实验室",
-      "share": 1.13
-    },
-    {
-      "l1": "Agriculture and Farming",
-      "zh": "农业与园艺",
-      "share": 0.99
-    },
-    {
-      "l1": "Hospitality",
-      "zh": "酒店",
-      "share": 0.29
-    },
-    {
-      "l1": "Sports and Recreation",
-      "zh": "体育与休闲",
-      "share": 0.29
-    },
-    {
-      "l1": "Cleaning and Sanitation",
-      "zh": "清洁与洗衣",
-      "share": 0.27
-    }
-  ],
   "scenes": [
     {
       "l1": "Repair Services",
       "zh": "维修服务",
       "slug": "repair-services",
-      "hours": 710,
       "task_count": 47,
       "venues": [
         {
@@ -214,13 +123,12 @@
           "l1": "Repair Services"
         }
       ],
-      "ep_count": 6047
+      "sites": 20
     },
     {
       "l1": "Clothing and Fashion",
       "zh": "服装与时尚",
       "slug": "clothing-and-fashion",
-      "hours": 220,
       "task_count": 15,
       "venues": [
         {
@@ -290,13 +198,12 @@
           "l1": "Clothing and Fashion"
         }
       ],
-      "ep_count": 2548
+      "sites": 4
     },
     {
       "l1": "Energy and Utilities",
       "zh": "能源与公用事业",
       "slug": "energy-and-utilities",
-      "hours": 195,
       "task_count": 25,
       "venues": [
         {
@@ -366,13 +273,12 @@
           "l1": "Energy and Utilities"
         }
       ],
-      "ep_count": 1935
+      "sites": 1
     },
     {
       "l1": "Education and Training",
       "zh": "教育培训",
       "slug": "education-and-training",
-      "hours": 149,
       "task_count": 22,
       "venues": [
         {
@@ -454,13 +360,12 @@
           "l1": "Education and Training"
         }
       ],
-      "ep_count": 1043
+      "sites": 4
     },
     {
       "l1": "Food and Beverage",
       "zh": "餐饮",
       "slug": "food-and-beverage",
-      "hours": 129,
       "task_count": 27,
       "venues": [
         {
@@ -534,13 +439,12 @@
           "l1": "Food and Beverage"
         }
       ],
-      "ep_count": 1502
+      "sites": 7
     },
     {
       "l1": "Retail and Consumer Goods",
       "zh": "零售与消费品",
       "slug": "retail-and-consumer-goods",
-      "hours": 124,
       "task_count": 21,
       "venues": [
         {
@@ -618,13 +522,12 @@
           "l1": "Retail and Consumer Goods"
         }
       ],
-      "ep_count": 921
+      "sites": 5
     },
     {
       "l1": "Creative Workshops",
       "zh": "创意工坊",
       "slug": "creative-workshops",
-      "hours": 74,
       "task_count": 4,
       "venues": [
         {
@@ -674,13 +577,12 @@
           "l1": "Creative Workshops"
         }
       ],
-      "ep_count": 665
+      "sites": 2
     },
     {
       "l1": "Healthcare and Pharmacy",
       "zh": "医疗与药房",
       "slug": "healthcare-and-pharmacy",
-      "hours": 60,
       "task_count": 14,
       "venues": [
         {
@@ -730,13 +632,12 @@
           "l1": "Healthcare and Pharmacy"
         }
       ],
-      "ep_count": 568
+      "sites": 3
     },
     {
       "l1": "Beauty and Personal Care",
       "zh": "美容与个人护理",
       "slug": "beauty-and-personal-care",
-      "hours": 58,
       "task_count": 16,
       "venues": [
         {
@@ -794,13 +695,12 @@
           "l1": "Beauty and Personal Care"
         }
       ],
-      "ep_count": 395
+      "sites": 6
     },
     {
       "l1": "Printing and Design",
       "zh": "印刷与设计",
       "slug": "printing-and-design",
-      "hours": 32,
       "task_count": 12,
       "venues": [
         {
@@ -850,13 +750,12 @@
           "l1": "Printing and Design"
         }
       ],
-      "ep_count": 479
+      "sites": 1
     },
     {
       "l1": "Construction and Hardware",
       "zh": "建筑与五金",
       "slug": "construction-and-hardware",
-      "hours": 24,
       "task_count": 16,
       "venues": [
         {
@@ -926,13 +825,12 @@
           "l1": "Construction and Hardware"
         }
       ],
-      "ep_count": 347
+      "sites": 2
     },
     {
       "l1": "Automotive and Transport",
       "zh": "汽车与交通",
       "slug": "automotive-and-transport",
-      "hours": 23,
       "task_count": 9,
       "venues": [
         {
@@ -1002,13 +900,12 @@
           "l1": "Automotive and Transport"
         }
       ],
-      "ep_count": 202
+      "sites": 2
     },
     {
       "l1": "Laboratory / Scientific",
       "zh": "实验室",
       "slug": "laboratory-scientific",
-      "hours": 21,
       "task_count": 7,
       "venues": [
         {
@@ -1082,13 +979,12 @@
           "l1": "Laboratory / Scientific"
         }
       ],
-      "ep_count": 327
+      "sites": 2
     },
     {
       "l1": "Agriculture and Farming",
       "zh": "农业与园艺",
       "slug": "agriculture-and-farming",
-      "hours": 18,
       "task_count": 5,
       "venues": [
         {
@@ -1158,13 +1054,12 @@
           "l1": "Agriculture and Farming"
         }
       ],
-      "ep_count": 250
+      "sites": 1
     },
     {
       "l1": "Hospitality",
       "zh": "酒店",
       "slug": "hospitality",
-      "hours": 5,
       "task_count": 9,
       "venues": [
         {
@@ -1234,13 +1129,12 @@
           "l1": "Hospitality"
         }
       ],
-      "ep_count": 70
+      "sites": 1
     },
     {
       "l1": "Sports and Recreation",
       "zh": "体育与休闲",
       "slug": "sports-and-recreation",
-      "hours": 5,
       "task_count": 1,
       "venues": [
         {
@@ -1290,13 +1184,12 @@
           "l1": "Sports and Recreation"
         }
       ],
-      "ep_count": 19
+      "sites": 1
     },
     {
       "l1": "Cleaning and Sanitation",
       "zh": "清洁与洗衣",
       "slug": "cleaning-and-sanitation",
-      "hours": 5,
       "task_count": 2,
       "venues": [
         {
@@ -1346,7 +1239,7 @@
           "l1": "Cleaning and Sanitation"
         }
       ],
-      "ep_count": 37
+      "sites": 1
     }
   ],
   "diff": [
@@ -1476,9 +1369,8 @@
       "en": "Smartphone disassembly and reassembly",
       "l1": "Repair Services",
       "l1_zh": "维修服务",
-      "hours": 184.2,
-      "eps": 1551,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 6
     },
     {
       "id": "garment_sewing_repair_and_alteration",
@@ -1486,9 +1378,8 @@
       "en": "Garment sewing repair and alteration",
       "l1": "Clothing and Fashion",
       "l1_zh": "服装与时尚",
-      "hours": 167.8,
-      "eps": 1887,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 5
     },
     {
       "id": "mahjong_machine_repair",
@@ -1496,9 +1387,8 @@
       "en": "Mahjong machine repair",
       "l1": "Repair Services",
       "l1_zh": "维修服务",
-      "hours": 151.5,
-      "eps": 1782,
-      "hard_pct": 99
+      "hard_pct": 99,
+      "sites": 2
     },
     {
       "id": "smart_lock_repair",
@@ -1506,9 +1396,8 @@
       "en": "Smart lock repair",
       "l1": "Repair Services",
       "l1_zh": "维修服务",
-      "hours": 109.1,
-      "eps": 729,
-      "hard_pct": 99
+      "hard_pct": 99,
+      "sites": 2
     },
     {
       "id": "electronic_device_disassembly_and_assembly",
@@ -1516,9 +1405,8 @@
       "en": "Electronic device disassembly and assembly",
       "l1": "Energy and Utilities",
       "l1_zh": "能源与公用事业",
-      "hours": 107.3,
-      "eps": 966,
-      "hard_pct": 99
+      "hard_pct": 99,
+      "sites": 4
     },
     {
       "id": "household_appliance_repair",
@@ -1526,9 +1414,8 @@
       "en": "Household appliance repair",
       "l1": "Repair Services",
       "l1_zh": "维修服务",
-      "hours": 103.3,
-      "eps": 724,
-      "hard_pct": 99
+      "hard_pct": 99,
+      "sites": 8
     },
     {
       "id": "watch_repair",
@@ -1536,9 +1423,8 @@
       "en": "Watch repair",
       "l1": "Retail and Consumer Goods",
       "l1_zh": "零售与消费品",
-      "hours": 84.2,
-      "eps": 605,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 3
     },
     {
       "id": "dental_wax_tooth_carving",
@@ -1546,9 +1432,8 @@
       "en": "Dental wax tooth carving",
       "l1": "Education and Training",
       "l1_zh": "教育培训",
-      "hours": 75.5,
-      "eps": 293,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 1
     },
     {
       "id": "pump_flange_bolting",
@@ -1556,9 +1441,8 @@
       "en": "Pump flange bolting",
       "l1": "Energy and Utilities",
       "l1_zh": "能源与公用事业",
-      "hours": 38.1,
-      "eps": 511,
-      "hard_pct": 99
+      "hard_pct": 99,
+      "sites": 1
     },
     {
       "id": "gourd_carving",
@@ -1566,9 +1450,8 @@
       "en": "Gourd carving",
       "l1": "Creative Workshops",
       "l1_zh": "创意工坊",
-      "hours": 38,
-      "eps": 442,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 1
     },
     {
       "id": "computer_hardware_assembly_and_testing",
@@ -1576,9 +1459,8 @@
       "en": "Computer hardware assembly and testing",
       "l1": "Repair Services",
       "l1_zh": "维修服务",
-      "hours": 37.9,
-      "eps": 385,
-      "hard_pct": 98
+      "hard_pct": 98,
+      "sites": 11
     },
     {
       "id": "cake_assembly_and_frosting",
@@ -1586,9 +1468,8 @@
       "en": "Cake assembly and frosting",
       "l1": "Food and Beverage",
       "l1_zh": "餐饮",
-      "hours": 33.9,
-      "eps": 301,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 5
     },
     {
       "id": "cross_stitch_embroidery",
@@ -1596,9 +1477,8 @@
       "en": "Cross stitch embroidery",
       "l1": "Creative Workshops",
       "l1_zh": "创意工坊",
-      "hours": 33.3,
-      "eps": 206,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 1
     },
     {
       "id": "valve_disassembly_and_servicing",
@@ -1606,9 +1486,8 @@
       "en": "Valve disassembly and servicing",
       "l1": "Energy and Utilities",
       "l1_zh": "能源与公用事业",
-      "hours": 33.3,
-      "eps": 242,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 1
     },
     {
       "id": "circuit_board_soldering_rework",
@@ -1616,9 +1495,8 @@
       "en": "Circuit board soldering rework",
       "l1": "Repair Services",
       "l1_zh": "维修服务",
-      "hours": 31.4,
-      "eps": 223,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 11
     },
     {
       "id": "bakery_ingredient_prep",
@@ -1626,9 +1504,8 @@
       "en": "Bakery ingredient prep",
       "l1": "Food and Beverage",
       "l1_zh": "餐饮",
-      "hours": 31.2,
-      "eps": 468,
-      "hard_pct": 94
+      "hard_pct": 94,
+      "sites": 6
     },
     {
       "id": "computer_fan_cleaning",
@@ -1636,9 +1513,8 @@
       "en": "Computer fan cleaning",
       "l1": "Repair Services",
       "l1_zh": "维修服务",
-      "hours": 30.9,
-      "eps": 204,
-      "hard_pct": 97
+      "hard_pct": 97,
+      "sites": 10
     },
     {
       "id": "cake_decorating",
@@ -1646,9 +1522,8 @@
       "en": "Cake decorating",
       "l1": "Food and Beverage",
       "l1_zh": "餐饮",
-      "hours": 30.8,
-      "eps": 278,
-      "hard_pct": 99
+      "hard_pct": 99,
+      "sites": 3
     },
     {
       "id": "floral_arrangement_making",
@@ -1656,9 +1531,8 @@
       "en": "Floral arrangement making",
       "l1": "Retail and Consumer Goods",
       "l1_zh": "零售与消费品",
-      "hours": 27.1,
-      "eps": 190,
-      "hard_pct": 93
+      "hard_pct": 93,
+      "sites": 1
     },
     {
       "id": "haircutting",
@@ -1666,9 +1540,8 @@
       "en": "Haircutting",
       "l1": "Beauty and Personal Care",
       "l1_zh": "美容与个人护理",
-      "hours": 27,
-      "eps": 127,
-      "hard_pct": 100
+      "hard_pct": 100,
+      "sites": 4
     }
   ],
   "meta_groups": [
@@ -1884,5 +1757,6 @@
       "ven": "Included"
     }
   ],
-  "tree": "episode/\n├─ <span class=\"zh\">头部双目：左目、右目 MP4 + 逐帧时间戳</span><span class=\"en\">Head stereo: left and right MP4 + per-frame timestamps</span>\n├─ <span class=\"zh\">左腕、右腕：MP4 + 逐帧时间戳</span><span class=\"en\">Left and right wrist: MP4 + per-frame timestamps</span>\n├─ <span class=\"zh\">IMU × 3：头部、左腕、右腕</span><span class=\"en\">IMU × 3: head, left wrist, right wrist</span>\n├─ <span class=\"zh\">音频</span><span class=\"en\">Audio</span>\n├─ calibration_camera.yaml, calibration_imu.yaml\n└─ metadata.json"
+  "tree": "episode/\n├─ <span class=\"zh\">头部双目：左目、右目 MP4 + 逐帧时间戳</span><span class=\"en\">Head stereo: left and right MP4 + per-frame timestamps</span>\n├─ <span class=\"zh\">左腕、右腕：MP4 + 逐帧时间戳</span><span class=\"en\">Left and right wrist: MP4 + per-frame timestamps</span>\n├─ <span class=\"zh\">IMU × 3：头部、左腕、右腕</span><span class=\"en\">IMU × 3: head, left wrist, right wrist</span>\n├─ <span class=\"zh\">音频</span><span class=\"en\">Audio</span>\n├─ calibration_camera.yaml, calibration_imu.yaml\n└─ metadata.json",
+  "raw_download": "https://cervo-samples.peterl.workers.dev/d/showcase"
 }
